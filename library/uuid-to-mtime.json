@@ -190,13 +190,13 @@
     "relativePath": "prefabs\\blocks\\Grass.prefab"
   },
   "b0593ec3-8aef-4ecf-ad50-854df4e5c7e0": {
-    "asset": 1475171202696,
-    "meta": 1475171202706,
+    "asset": 1475341328904,
+    "meta": 1475341328916,
     "relativePath": "prefabs\\items\\antidote_right.prefab"
   },
   "c25d7c72-6e7f-4c30-94e2-fdaf7b0b2819": {
-    "asset": 1475171191523,
-    "meta": 1475171191542,
+    "asset": 1475355860871,
+    "meta": 1475355860883,
     "relativePath": "prefabs\\items\\antidote_left.prefab"
   },
   "7ff6febc-5d69-4595-8042-70135bfc24b5": {
@@ -210,13 +210,13 @@
     "relativePath": "prefabs\\items\\blocked_stone.prefab"
   },
   "4810e351-b48c-4ea0-a025-c03ebf401895": {
-    "asset": 1475171728926,
-    "meta": 1475171728938,
+    "asset": 1475355883567,
+    "meta": 1475355883579,
     "relativePath": "prefabs\\items\\coin_left.prefab"
   },
   "17206c6f-5aec-4957-9b45-d3887d5a4e96": {
-    "asset": 1475171680046,
-    "meta": 1475171680073,
+    "asset": 1475355828847,
+    "meta": 1475355828880,
     "relativePath": "prefabs\\items\\coin_right.prefab"
   },
   "67f25036-befa-4353-93ca-a72710401bc9": {
@@ -230,13 +230,13 @@
     "relativePath": "prefabs\\items\\slow_down_bottom.prefab"
   },
   "35b5a2ba-d4ea-4e3b-a6c6-61cde430b17a": {
-    "asset": 1475171713355,
-    "meta": 1475171713371,
+    "asset": 1475341261615,
+    "meta": 1475341261627,
     "relativePath": "prefabs\\items\\star_right.prefab"
   },
   "41e4c83c-eed8-4fa2-b99a-3b8a423b3c5a": {
-    "asset": 1475171720649,
-    "meta": 1475171720658,
+    "asset": 1475355938238,
+    "meta": 1475355938251,
     "relativePath": "prefabs\\items\\star_left.prefab"
   },
   "2e0fa12e-4589-41eb-8612-b6f1961efe38": {
@@ -1305,8 +1305,8 @@
     "relativePath": "scenes\\GameOverScene.fire"
   },
   "c80de14e-2d95-49f8-8c8f-e804be18efb5": {
-    "asset": 1475333619127,
-    "meta": 1475335006533,
+    "asset": 1475356071264,
+    "meta": 1475356071292,
     "relativePath": "scenes\\GameScene.fire"
   },
   "a9f9ca02-c4fa-469c-9829-b319d17f5932": {
