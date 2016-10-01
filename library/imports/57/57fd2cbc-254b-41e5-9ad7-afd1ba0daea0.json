@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "antidote_right_shadow",
+    "texture": "b70941e1-12c6-4836-af76-591642949e93",
+    "atlas": "",
+    "rect": [
+      29,
+      65,
+      25,
+      14
+    ],
+    "offset": [
+      0,
+      -24
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

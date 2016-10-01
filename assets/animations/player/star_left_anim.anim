@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "star_left_anim",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b612db06-e74e-42a8-a413-9f8c44abebe7"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "a3f465b0-08e3-49c6-9641-f03b2193855c"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "eec9c4a3-268e-401a-8598-5e843163c709"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "bdfe3da1-1f8f-4f4d-9b8c-a39edb3ec282"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "b84fa1e8-f644-4e7a-8c62-2140703e0325"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "62f02ce8-1c42-4dac-9f28-a760a521813b"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

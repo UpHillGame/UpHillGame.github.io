@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "water_cube_07",
+    "texture": "86ae2e9d-898c-49ed-99bf-81b59226ea93",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      96
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

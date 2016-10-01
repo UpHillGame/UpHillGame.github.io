@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "trapdoor_01",
+    "texture": "3827477b-ca7f-4364-bb6c-bacb7f59b2f1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      96
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

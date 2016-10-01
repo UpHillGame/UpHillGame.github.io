@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "poison_01",
+    "texture": "e15a6085-32af-4142-9544-af36050f92a6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      96
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "water_base_14",
+    "texture": "2f60db4d-8b47-4e1d-b568-0553ffe31f5a",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      82,
+      48
+    ],
+    "offset": [
+      0.5,
+      24
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

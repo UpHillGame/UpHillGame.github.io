@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "water_right_06",
+    "texture": "33fe9ef7-0a7a-4650-9f4d-117009fd3bc7",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      82,
+      95
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

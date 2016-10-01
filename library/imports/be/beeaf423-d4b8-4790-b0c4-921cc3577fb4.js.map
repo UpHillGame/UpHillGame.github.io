@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAM,SAAS,GAAG,OAAO,CAAC,OAAO,CAAC,CAAC,SAAS,CAAC;AAC7C,IAAM,mBAAmB,GAAG,OAAO,CAAC,QAAQ,CAAC,CAAC,mBAAmB,CAAC;;AAElE,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;;;;;;AAMR,iBAAS,EAAE,KAAK;AAChB,eAAO,EAAE,KAAK;;AAEd,iBAAS,EAAE;AACP,uBAAS,SAAS,CAAC,IAAI;AACvB,gBAAI,EAAE,SAAS;SAClB;;AAED,YAAI,EAAE;AACF,uBAAS,IAAI;AACb,gBAAI,EAAE,EAAE,CAAC,IAAI;SAChB;;KAEJ;;;AAGD,UAAM,EAAE,kBAAY;AAChB,YAAI,CAAC,WAAW,GAAG,KAAK,CAAC;KAC5B;;AAED,kBAAc,EAAE,wBAAS,MAAM,EAAE,IAAI,EAAC;;AAElC,cAAM,CAAC,IAAI,EAAE,CAAC;KACjB;;AAED,WAAO,EAAE,mBAAY;AACjB,UAAE,CAAC,GAAG,CAAC,yBAAyB,CAAC,CAAC;KACrC;;CAMJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "const BlockType = require('Types').BlockType;\r\nconst PlayerMovementState = require('States').PlayerMovementState;\r\n\r\ncc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        /*gamefield: {\r\n            default: null,\r\n            type: cc.Node,\r\n        },*/\r\n\r\n        isBlocked: false,\r\n        hasItem: false,\r\n\r\n        blocktype: {\r\n            default: BlockType.None,\r\n            type: BlockType,\r\n        },\r\n\r\n        item: {\r\n            default: null,\r\n            type: cc.Node,\r\n        },\r\n\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        this.playerOnTop = false;\r\n    },\r\n\r\n    onStepCallback: function(player, game){\r\n        // Perform the action the block produces(change player or environment)\r\n        player.fall();\r\n    },\r\n\r\n    collide: function () {\r\n        cc.log('wir sind in der Methode');\r\n    },\r\n\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

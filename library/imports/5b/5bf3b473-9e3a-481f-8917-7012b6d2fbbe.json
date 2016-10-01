@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "player_shadow",
+    "texture": "48727a11-2120-465b-82c7-a7b622faac1f",
+    "atlas": "",
+    "rect": [
+      6,
+      51,
+      71,
+      42
+    ],
+    "offset": [
+      0,
+      -24
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

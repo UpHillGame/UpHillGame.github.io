@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "coin_right",
+    "texture": "68819e7f-d3fc-4114-9c87-f847365034aa",
+    "atlas": "",
+    "rect": [
+      20,
+      21,
+      43,
+      54
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

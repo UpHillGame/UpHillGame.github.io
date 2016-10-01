@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "slow_down_bottom",
+    "texture": "90becb11-0cdd-47c7-93e9-6fab6cecdc15",
+    "atlas": "",
+    "rect": [
+      6,
+      25,
+      71,
+      67
+    ],
+    "offset": [
+      0,
+      -10.5
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

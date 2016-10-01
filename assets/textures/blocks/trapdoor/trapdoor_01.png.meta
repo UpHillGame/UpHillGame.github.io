@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "3827477b-ca7f-4364-bb6c-bacb7f59b2f1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "trapdoor_01": {
+      "ver": "1.0.3",
+      "uuid": "1e6a7e11-6b2d-4299-9793-b6372226e640",
+      "rawTextureUuid": "3827477b-ca7f-4364-bb6c-bacb7f59b2f1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 83,
+      "height": 96,
+      "rawWidth": 83,
+      "rawHeight": 96,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

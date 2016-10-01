@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "player_right_star_02",
+    "texture": "3905e1d7-ae68-4b03-a238-0a8519449299",
+    "atlas": "",
+    "rect": [
+      5,
+      6,
+      73,
+      87
+    ],
+    "offset": [
+      0,
+      -1.5
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

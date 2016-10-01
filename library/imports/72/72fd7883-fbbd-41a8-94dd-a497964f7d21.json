@@ -1,0 +1,53 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "icons_atlas.plist",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_spriteFrames": {
+    "cancel": {
+      "__uuid__": "14b54143-4468-45dd-90a5-95df9bcb37ec"
+    },
+    "cancel_pressed": {
+      "__uuid__": "3a292f07-5a64-4272-a4ca-c911de140cac"
+    },
+    "game_over": {
+      "__uuid__": "bd571687-b4d2-4cdc-9e66-e9c231ca7855"
+    },
+    "info": {
+      "__uuid__": "a0c9271e-5a14-4cd1-8b93-9ac3e6593330"
+    },
+    "info_pressed": {
+      "__uuid__": "deb20f83-9fc3-4e13-9fee-c403d8ec8d85"
+    },
+    "pause": {
+      "__uuid__": "0da67710-20cc-46fb-8eec-a1020a692cf9"
+    },
+    "pause_pressed": {
+      "__uuid__": "be3967e4-4f86-46ff-83a7-96f1513eaf9c"
+    },
+    "play": {
+      "__uuid__": "04015edd-4f4b-445d-beb2-4a32b86fe9f9"
+    },
+    "play_pressed": {
+      "__uuid__": "e51a769f-dcd1-4058-9bbe-745709d6c143"
+    },
+    "questionmark": {
+      "__uuid__": "ff4474ec-5062-4a13-9187-6390a3c6f868"
+    },
+    "questionmark_pressed": {
+      "__uuid__": "ed458f07-e44f-4c51-b1c7-b8490bc7b0d3"
+    },
+    "quit": {
+      "__uuid__": "223af167-95b3-452c-b00b-cc8e30d96f5a"
+    },
+    "quit_pressed": {
+      "__uuid__": "a3fde8f8-d7de-4599-ae85-31f83300b775"
+    },
+    "text_background": {
+      "__uuid__": "273253fe-77de-46b3-94c5-9c97fb5507b2"
+    },
+    "uphill": {
+      "__uuid__": "56019a2f-9092-4c95-9d10-65bf62e65a7f"
+    }
+  }
+}

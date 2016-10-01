@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "coin_left_shadow",
+    "texture": "275f6df1-429a-4ece-ba1f-f208d2b8b194",
+    "atlas": "",
+    "rect": [
+      21,
+      60,
+      41,
+      24
+    ],
+    "offset": [
+      0,
+      -24
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

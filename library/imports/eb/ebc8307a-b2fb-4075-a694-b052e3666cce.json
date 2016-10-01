@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "atmos",
+    "texture": "23119116-44ad-4f5f-af4c-f17af04cff21",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1284,
+      960
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1284,
+      960
+    ]
+  }
+}

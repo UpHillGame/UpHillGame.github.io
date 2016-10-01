@@ -1,0 +1,65 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "player_atlas.plist",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_spriteFrames": {
+    "player_left": {
+      "__uuid__": "05e009ce-86f6-4ac2-9166-3686c07482f3"
+    },
+    "player_left_poison_01": {
+      "__uuid__": "145c7669-6366-420d-8eb0-37f2cd0d5b31"
+    },
+    "player_left_poison_02": {
+      "__uuid__": "a017cf05-5d85-4a90-a7d2-c2d3e848f5eb"
+    },
+    "player_left_star_01": {
+      "__uuid__": "b612db06-e74e-42a8-a413-9f8c44abebe7"
+    },
+    "player_left_star_02": {
+      "__uuid__": "a3f465b0-08e3-49c6-9641-f03b2193855c"
+    },
+    "player_left_star_03": {
+      "__uuid__": "eec9c4a3-268e-401a-8598-5e843163c709"
+    },
+    "player_left_star_04": {
+      "__uuid__": "bdfe3da1-1f8f-4f4d-9b8c-a39edb3ec282"
+    },
+    "player_left_star_05": {
+      "__uuid__": "b84fa1e8-f644-4e7a-8c62-2140703e0325"
+    },
+    "player_left_star_06": {
+      "__uuid__": "62f02ce8-1c42-4dac-9f28-a760a521813b"
+    },
+    "player_right": {
+      "__uuid__": "f1f2d4a6-8e20-4c53-9319-8297de995ef1"
+    },
+    "player_right_poison_01": {
+      "__uuid__": "f796e75f-143b-4a86-bf13-4cbc8e2fd1f4"
+    },
+    "player_right_poison_02": {
+      "__uuid__": "4ef53eb3-f7d5-4a1d-b361-85899ec2cf8e"
+    },
+    "player_right_star_01": {
+      "__uuid__": "916bb37d-9bfb-4e38-a079-0ff874016ddf"
+    },
+    "player_right_star_02": {
+      "__uuid__": "169c2668-eb9c-41b9-9eed-cd05bc84b08c"
+    },
+    "player_right_star_03": {
+      "__uuid__": "f32d193d-31df-44bd-9176-36c9f5e5bda8"
+    },
+    "player_right_star_04": {
+      "__uuid__": "92bdf215-0f12-4a63-8b04-4c7817186c90"
+    },
+    "player_right_star_05": {
+      "__uuid__": "0f8b6f1f-c63e-41f9-a2d9-d8df05e92d27"
+    },
+    "player_right_star_06": {
+      "__uuid__": "53d78fb1-3fc2-4574-af14-442ddbfb265a"
+    },
+    "player_shadow": {
+      "__uuid__": "425efd72-c1a9-4d0b-80ef-107bb762476b"
+    }
+  }
+}

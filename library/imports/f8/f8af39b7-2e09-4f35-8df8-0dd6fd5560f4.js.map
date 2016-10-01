@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAM,SAAS,GAAG,EAAE,CAAC,IAAI,CAAC;AACtB,QAAI,EAAE,GAAG;AACT,QAAI,EAAE,CAAC,CAAC;AACR,WAAO,EAAE,CAAC,CAAC;AACX,WAAO,EAAE,CAAC,CAAC;AACX,WAAO,EAAE,CAAC,CAAC;AACX,YAAQ,EAAE,CAAC,CAAC;AACZ,UAAM,EAAE,CAAC,CAAC;AACV,WAAO,EAAE,CAAC,CAAC;AACX,SAAK,EAAE,CAAC,CAAC,EACZ,CAAC,CAAC;;;AAEH,IAAM,mBAAmB,GAAG,EAAE,CAAC,IAAI,CAAC;AAChC,YAAQ,EAAE,CAAC,CAAC;AACZ,WAAO,EAAE,CAAC,CAAC;AACX,WAAO,EAAE,CAAC,CAAC,EACd,CAAC,CAAC;;;AAGH,IAAM,SAAS,GAAG,EAAE,CAAC,IAAI,CAAC;AACtB,YAAQ,EAAE,CAAC,CAAC;AACZ,WAAO,EAAE,CAAC,CAAC;AACX,UAAM,EAAE,CAAC,CAAC;CACb,CAAC,CAAC;;AAEH,IAAM,iBAAiB,GAAG,EAAE,CAAC,IAAI,CAAC;AAC9B,QAAI,EAAE,CAAC,CAAC;AACR,UAAM,EAAE,CAAC,CAAC;AACV,WAAO,EAAE,CAAC,CAAC;CACd,CAAC,CAAC;;AAEH,IAAM,WAAW,GAAG,EAAE,CAAC,IAAI,CAAC;AACxB,SAAK,EAAE,CAAC,CAAC;AACT,QAAI,EAAE,CAAC,CAAC;AACR,YAAQ,EAAE,CAAC,CAAC;AACZ,cAAU,EAAE,CAAC,CAAC;CACjB,CAAC,CAAC;;AAEH,MAAM,CAAC,OAAO,GAAG;AACb,aAAS,EAAT,SAAS;AACT,uBAAmB,EAAnB,mBAAmB;AACnB,aAAS,EAAT,SAAS;AACT,eAAW,EAAX,WAAW;AACX,qBAAiB,EAAjB,iBAAiB;CACpB,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "const GameState = cc.Enum({\r\n    None: 999, \r\n    Idle: -1, // Waiting for Player to choose something in the menu\r\n    Loading: -1, // Player pressed Start -> load game\r\n    Waiting: -1, // Waiting for first move to start timers etc\r\n    Playing: -1, // Game loaded and started\r\n    GameOver: -1, //Player died\r\n    Paused: -1, // Game was paused by the player\r\n    Resumed: -1, // Game was resumed after pausing\r\n    Ended: -1, // Game was closed by the player or he lost -> back to idle?\r\n});\r\n\r\nconst PlayerMovementState = cc.Enum({\r\n    Standing: -1,   //Player is standing still (has fully arrived on a block)\r\n    Jumping: -1,    //Player is moving onto another block(in animation)\r\n    Falling: -1,    //Player is falling down the gamefield\r\n});\r\n\r\n\r\nconst ItemState = cc.Enum({\r\n    Pickable: -1,   \r\n    Blocked: -1,    \r\n    Picked: -1,\r\n});\r\n\r\nconst ItemActivityState = cc.Enum({\r\n    Idle: -1,\r\n    Active: -1,    \r\n    Expired: -1,\r\n});  \r\n\r\nconst PlayerState = cc.Enum({\r\n    Alive: -1,   \r\n    Dead: -1,    \r\n    Poisoned: -1,    \r\n    Invincible: -1,    \r\n});\r\n\r\nmodule.exports = {\r\n    GameState,\r\n    PlayerMovementState,\r\n    ItemState,\r\n    PlayerState,\r\n    ItemActivityState,\r\n};"
+  ]
+}

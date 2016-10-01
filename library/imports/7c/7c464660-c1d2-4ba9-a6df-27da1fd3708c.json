@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "blocked_bush",
+    "texture": "15858878-669e-4732-aa91-f824a307117e",
+    "atlas": "",
+    "rect": [
+      16,
+      24,
+      52,
+      64
+    ],
+    "offset": [
+      0.5,
+      -8
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

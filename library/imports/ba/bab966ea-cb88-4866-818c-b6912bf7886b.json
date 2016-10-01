@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "antidote_left_shadow",
+    "texture": "7401a6fe-1fbb-4a9e-9c01-cad6e33495fe",
+    "atlas": "",
+    "rect": [
+      29,
+      65,
+      25,
+      15
+    ],
+    "offset": [
+      0,
+      -24.5
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

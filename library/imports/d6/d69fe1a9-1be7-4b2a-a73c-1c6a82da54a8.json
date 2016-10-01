@@ -1,0 +1,67 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "trapdoor",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.36666666666666664,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "1e6a7e11-6b2d-4299-9793-b6372226e640"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "a5903452-da82-4321-a0a9-ab1b05e92c59"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "a3c62def-0fd7-429f-a046-b5f2f2020779"
+            }
+          },
+          {
+            "frame": 0.15,
+            "value": {
+              "__uuid__": "2e6aa199-da3d-4557-80c7-963bacf838f2"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "0a099a85-442d-4c7d-8dba-78f59259f869"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "73ebbd03-ecca-4cc8-bbd6-02a358a0bd6f"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "22600dfa-c655-4c39-91cf-a8d23ce18341"
+            }
+          },
+          {
+            "frame": 0.35,
+            "value": {
+              "__uuid__": "3eb36de5-8adb-4f71-895f-125ae2159108"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

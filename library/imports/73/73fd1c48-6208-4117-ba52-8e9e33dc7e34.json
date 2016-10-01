@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "poison_left_anim",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.0666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "145c7669-6366-420d-8eb0-37f2cd0d5b31"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "a017cf05-5d85-4a90-a7d2-c2d3e848f5eb"
+            }
+          },
+          {
+            "frame": 1.05,
+            "value": {
+              "__uuid__": "a017cf05-5d85-4a90-a7d2-c2d3e848f5eb"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

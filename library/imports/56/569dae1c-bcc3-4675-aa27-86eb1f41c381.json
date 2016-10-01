@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "uphill",
+    "texture": "f7313d53-a052-4aaa-b55d-4e9b5afbbf53",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      192,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      192,
+      100
+    ]
+  }
+}

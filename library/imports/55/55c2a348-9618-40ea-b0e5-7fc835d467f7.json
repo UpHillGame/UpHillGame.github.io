@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "star_left_shadow",
+    "texture": "67b65868-5e10-4695-bb98-bf3a337d560d",
+    "atlas": "",
+    "rect": [
+      21,
+      62,
+      41,
+      21
+    ],
+    "offset": [
+      0,
+      -24.5
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

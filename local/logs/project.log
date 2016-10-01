@@ -1,0 +1,47 @@
+2016-09-29T20:30:38.439Z - normal: Load ~/.CocosCreator/settings.json
+2016-09-29T20:30:38.448Z - normal: checking language setting...
+2016-09-29T20:30:38.449Z - normal: Language: en
+2016-09-29T20:30:39.539Z - success: protocol editor-framework registered
+2016-09-29T20:30:39.539Z - success: protocol app registered
+2016-09-29T20:30:39.539Z - success: protocol packages registered
+2016-09-29T20:30:39.539Z - success: protocol theme registered
+2016-09-29T20:30:39.539Z - success: protocol unpack registerred
+2016-09-29T20:30:41.042Z - normal: connected!
+2016-09-29T20:30:41.045Z - normal: Check project E:\Projects\UTM
+2016-09-29T20:30:41.049Z - normal: Initializing Cocos Creator Editor
+2016-09-29T20:30:41.518Z - normal: Initializing Cocos2d
+2016-09-29T20:30:41.687Z - normal: Initializing Asset Database
+2016-09-29T20:30:41.707Z - success: protocol uuid registerred
+2016-09-29T20:30:41.707Z - success: protocol db registerred
+2016-09-29T20:30:41.707Z - success: protocol thumbnail registerred
+2016-09-29T20:30:41.708Z - normal: Loading editor/builtin packages
+2016-09-29T20:30:41.845Z - success: assets loaded
+2016-09-29T20:30:41.848Z - success: builder loaded
+2016-09-29T20:30:41.852Z - success: hierarchy loaded
+2016-09-29T20:30:41.858Z - success: inspector loaded
+2016-09-29T20:30:41.861Z - success: keystore loaded
+2016-09-29T20:30:41.866Z - success: node-library loaded
+2016-09-29T20:30:41.869Z - success: preferences loaded
+2016-09-29T20:30:41.896Z - success: project-importer loaded
+2016-09-29T20:30:41.898Z - success: project-settings loaded
+2016-09-29T20:30:41.901Z - success: ui-kit loaded
+2016-09-29T20:30:41.904Z - success: ui-grid loaded
+2016-09-29T20:30:41.909Z - success: scene loaded
+2016-09-29T20:30:41.912Z - success: sprite-editor loaded
+2016-09-29T20:30:41.917Z - success: timeline loaded
+2016-09-29T20:30:41.917Z - normal: Loading builtin packages
+2016-09-29T20:30:41.922Z - success: asset-db-debugger loaded
+2016-09-29T20:30:41.925Z - success: cocos-package loaded
+2016-09-29T20:30:41.927Z - success: code-editor loaded
+2016-09-29T20:30:41.929Z - success: color-picker loaded
+2016-09-29T20:30:41.932Z - success: console loaded
+2016-09-29T20:30:41.935Z - success: package-manager loaded
+2016-09-29T20:30:41.940Z - success: tester loaded
+2016-09-29T20:30:41.943Z - success: ui-kit-preview-extra loaded
+2016-09-29T20:30:41.946Z - success: ui-kit-preview loaded
+2016-09-29T20:30:41.948Z - success: ui-tree loaded
+2016-09-29T20:30:41.987Z - normal: Initializing project E:\Projects\UTM
+2016-09-29T20:30:41.994Z - normal: Loading packages
+2016-09-29T20:30:42.000Z - normal: Run Application
+2016-09-29T20:30:42.944Z - success: preview server running at http://localhost:7456
+2016-09-29T20:30:47.615Z - normal: 1.2.1-rc.1

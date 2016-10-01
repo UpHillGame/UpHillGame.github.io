@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "01bfdd69-7185-4347-b790-a1de2dd1c74b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "player_right_poison_01": {
+      "ver": "1.0.3",
+      "uuid": "45351663-0deb-437b-8361-fcaf48b230fa",
+      "rawTextureUuid": "01bfdd69-7185-4347-b790-a1de2dd1c74b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -1.5,
+      "trimX": 5,
+      "trimY": 6,
+      "width": 73,
+      "height": 87,
+      "rawWidth": 83,
+      "rawHeight": 96,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

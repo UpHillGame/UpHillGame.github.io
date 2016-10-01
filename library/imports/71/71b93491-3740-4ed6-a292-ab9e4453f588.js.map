@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAM,QAAQ,GAAG,EAAE,CAAC,IAAI,CAAC;AACrB,QAAI,EAAE,GAAG;AACT,QAAI,EAAE,CAAC,CAAC;AACR,QAAI,EAAE,CAAC,CAAC;AACR,YAAQ,EAAE,CAAC,CAAC;AACZ,WAAO,EAAE,CAAC,CAAC;AACX,UAAM,EAAE,CAAC,CAAC;CACb,CAAC,CAAC;;AAEH,IAAM,SAAS,GAAG,EAAE,CAAC,IAAI,CAAC;AACtB,QAAI,EAAE,CAAC,CAAC;AACR,SAAK,EAAE,CAAC,CAAC;AACT,QAAI,EAAE,CAAC,CAAC;AACR,SAAK,EAAE,CAAC,CAAC;AACT,UAAM,EAAE,CAAC,CAAC;AACV,YAAQ,EAAE,CAAC,CAAC;AACZ,YAAQ,EAAE,CAAC,CAAC;AACZ,SAAK,EAAE,CAAC,CAAC;CACZ,CAAC,CAAC;;AAGH,MAAM,CAAC,OAAO,GAAG;AACb,YAAQ,EAAR,QAAQ;AACR,aAAS,EAAT,SAAS;CACZ,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "const ItemType = cc.Enum({\r\n    None: 999,\r\n    Star: -1,           // Score\r\n    Coin: -1,           // Climb two(f.e.) rows up\r\n    Antidote: -1,         // Cures poison\r\n    Blocker: -1,\r\n    Slower: -1,\r\n});\r\n\r\nconst BlockType = cc.Enum({\r\n    None: -1,\r\n    Empty: -1,\r\n    Dirt: -1,\r\n    Grass: -1,\r\n    Poison: -1,\r\n    Switcher: -1,\r\n    Trapdoor: -1,\r\n    Spike: -1,\r\n});\r\n\r\n\r\nmodule.exports = {\r\n    ItemType,\r\n    BlockType\r\n};"
+  ]
+}

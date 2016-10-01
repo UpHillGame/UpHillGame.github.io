@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "cloud_07",
+    "texture": "0d56ad0f-ac90-4529-987d-c307d526b9bc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      120,
+      132
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      120,
+      132
+    ]
+  }
+}

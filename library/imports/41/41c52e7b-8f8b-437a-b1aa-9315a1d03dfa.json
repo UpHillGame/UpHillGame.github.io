@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "poison_right_anim",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.02,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "f796e75f-143b-4a86-bf13-4cbc8e2fd1f4"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "4ef53eb3-f7d5-4a1d-b361-85899ec2cf8e"
+            }
+          },
+          {
+            "frame": 1.05,
+            "value": {
+              "__uuid__": "4ef53eb3-f7d5-4a1d-b361-85899ec2cf8e"
+            }
+          },
+          {
+            "frame": 2,
+            "value": {
+              "__uuid__": "f796e75f-143b-4a86-bf13-4cbc8e2fd1f4"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
