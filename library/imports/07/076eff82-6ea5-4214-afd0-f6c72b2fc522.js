@@ -10,6 +10,15 @@ var onSteppKills = false;
 var killActionExecuted = false;
 var pressDouble = 0;
 
+//disables the antialiasing, because it destroys the pixelart
+var __ccTexture2D_handleLoadedTexture = cc.Texture2D.prototype.handleLoadedTexture;
+cc.Texture2D.prototype.handleLoadedTexture = function () {
+    __ccTexture2D_handleLoadedTexture.apply(this, arguments);
+    this.setAliasTexParameters();
+};
+
+var pressCount = 0;
+
 cc.Class({
     'extends': cc.Component,
 
@@ -38,23 +47,25 @@ cc.Class({
         multiplierLabel: {
             'default': null,
             type: cc.Label
-        }
+        },
 
+        // Music Theme
+        themeurl: {
+            'default': null,
+            url: cc.AudioClip
+        }
     },
 
-    // Music Theme
-    /*themeurl: {
-        default: null,
-        type: cc.url,
-    },*/
     // use this for initialization
     onLoad: function onLoad() {
         //this.setFrameRate(60);
+        this.storage = cc.sys.localStorage;
         this.state = GameState.Waiting;
         //this.GameState = GameState;
         this.initalizeInputControl(); // Activate input handling
 
-        cc.audioEngine.playMusic("..\audio\music\theme", true);
+        cc.audioEngine.playMusic(this.themeurl, true);
+        this.storage.setItem('score', 0);
 
         this.score = 0;
         this.scoreMultiplier = 1;
@@ -95,20 +106,36 @@ cc.Class({
         //console.log('BlockType: ', this.gamefield.getBlockType(this.gamefield.getJumpField(dir)));
         //console.log('var destfield = ', destfield);
 
-        //steppedBlock is necessarry for Movement-collisioncontroll
+        // Handle swaped case
         if (this.player.isSwaped) {
             dir = -dir;
-            this.player.isSwaped = false;
+        }
+
+        // Handle slowed case
+        if (this.player.isSlowed) {
+            console.log("PRESSCOUNT" + pressCount);
+            pressCount++;
+            if (pressCount < 3) {
+                console.log("STILL SLOWED");
+                return false;
+            } else {
+                console.log("RELEASE" + pressCount);
+                pressCount = 0;
+                this.player.isSlowed = false;
+                //return true;
+            }
         }
 
         this.destfield = this.gamefield.getJumpField(dir);
         //console.log('destfield = ', this.destfield);
         //console.log('destfield = ', this.destfield.name);
+        //steppedBlock is necessarry for movement-collisioncontroll
         var steppedBlock = this.destfield.getComponent(this.destfield.name);
 
         if (steppedBlock.isBlocked) {
             return false;
         }
+        this.player.isSwaped = false;
 
         // !!! INSERT lines at end of file when bugs happen here !!!
 
@@ -137,33 +164,22 @@ cc.Class({
                         if (self.state === GameState.Waiting) self.state = GameState.Playing;
 
                         if (self.validateMove(1)) {
-
-                            console.log('pressDouble: ', pressDouble);
-                            if (pressDouble == 1) {
-                                console.log('NOCHMAL');
-                                pressDouble = 0;
-                                break;
-                            }
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos(); // Change array position after jump or bugs will spawn
-                            self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false;
+                            if (self.player.oldDest !== undefined) {
+                                self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false;
+                            }
                         }
                         break;
                     case cc.KEY.d:
                         if (self.state === GameState.Waiting) self.state = GameState.Playing;
 
                         if (self.validateMove(-1)) {
-
-                            console.log('pressDouble: ', pressDouble);
-                            if (pressDouble == 1) {
-                                console.log('NOCHMAL');
-                                pressDouble = 0;
-                                break;
-                            }
-
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos();
-                            self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false; //TODO vll in player?
+                            if (self.player.oldDest !== undefined) {
+                                self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false;
+                            }
                         }
                         break;
                     case cc.KEY.u:
@@ -202,6 +218,7 @@ cc.Class({
             this.moveFieldWithPlayer();
         }
         if (this.state === GameState.GameOver) {
+            this.storage.setItem('score', this.score);
             cc.director.loadScene('GameOverScene');
         }
     },

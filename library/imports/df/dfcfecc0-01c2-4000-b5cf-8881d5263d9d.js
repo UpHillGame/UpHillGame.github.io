@@ -21,6 +21,7 @@ cc.Class({
         isPoisoned: false,
         isAlive: false,
         isSwaped: false, //Player stands on a Switcher //TODO: nutzlos da nie verwendet in player
+        isSlowed: false,
 
         poisonTimer: 0,
         invincibiltyTimer: 0,
@@ -106,15 +107,23 @@ cc.Class({
     fall: function fall() {
         this.isInvincible = false;
         this.movestate = PlayerMovementState.Falling;
-        var gamestatecallback = cc.callFunc(this.changeGameState, this);
+        //var gamestatecallback = cc.callFunc(this.changeGameFallState,this);
+        var killcallback = cc.callFunc(this.kill, this);
         var soundcallback = cc.callFunc(this.playSound, this);
-        this.node.runAction(cc.sequence(cc.spawn(this.deform(), this.assembleAction()), gamestatecallback, soundcallback));
+        this.node.runAction(cc.sequence(cc.spawn(this.deform(), this.assembleAction()), soundcallback, killcallback));
         this.isAlive = false; //set here because alive impacts death anim.
         cc.audioEngine.stopAllEffects();
     },
 
     changeGameState: function changeGameState() {
-        if (this.isAlive || this.movestate === PlayerMovementState.Falling) this.game.getComponent('Game').state = GameState.GameOver;
+        if (!this.isAlive) this.game.getComponent('Game').state = GameState.GameOver;
+    },
+    changeGameFallState: function changeGameFallState() {
+        console.log("Alive: " + this.isAlive);
+        if (this.isAlive) this.isAlive = false;
+        console.log('Change GameState: ', this.game.getComponent('Game').state);
+        this.game.getComponent('Game').state = GameState.GameOver;
+        console.log(this.game.getComponent('Game').state);
     },
 
     changePlayerState: function changePlayerState() {

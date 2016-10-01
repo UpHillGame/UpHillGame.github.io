@@ -38,13 +38,16 @@ cc.Class({
     onLoad: function onLoad() {},
 
     destroyItem: function destroyItem() {
+        console.log("Itemtype to destroy: " + this.itemtype.toString());
+        console.log(ItemType[this.itemtype]);
         switch (this.itemtype) {
+            case ItemType.Slower:
+                break;
             case ItemType.Antidote:
             case ItemType.Coin:
             case ItemType.Star:
                 this.node.destroy();
-            case ItemType.Slower:
-                return;
+                break;
         }
     },
 
@@ -67,7 +70,8 @@ cc.Class({
                 player.isInvincible = true;
                 break;
             case ItemType.Slower:
-                // TODO slow player
+                console.log("SET SWAPED TRUE");
+                player.isSlowed = true;
                 break;
         }
         var pickedCallback = cc.callFunc(this.picked, this);
@@ -108,7 +112,7 @@ cc.Class({
     },
 
     playSound: function playSound() {
-        cc.audioEngine.playEffect(this.activationsound, false);
+        if (this.activationsound !== null) cc.audioEngine.playEffect(this.activationsound, false);
     }
 
 });

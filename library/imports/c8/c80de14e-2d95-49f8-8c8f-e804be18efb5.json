@@ -519,6 +519,7 @@
     "isPoisoned": false,
     "isAlive": false,
     "isSwaped": false,
+    "isSlowed": false,
     "poisonTimer": 5,
     "invincibiltyTimer": 8,
     "dir": 0,
@@ -709,6 +710,7 @@
     "pauseOverlay": {
       "__id__": 17
     },
+    "scoreLabel": null,
     "buttonAudio": {
       "__uuid__": "33bb28c8-90af-43e7-87de-66f56c1bbd16"
     },
@@ -908,6 +910,9 @@
     },
     "multiplierLabel": {
       "__id__": 25
+    },
+    "themeurl": {
+      "__uuid__": "7efdbae6-10b6-4aa4-b54b-64eaaaf479e4"
     }
   },
   {
@@ -940,8 +945,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 213,
+      "b": 0,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -1014,8 +1019,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 213,
+      "b": 0,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,

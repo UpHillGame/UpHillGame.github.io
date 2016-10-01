@@ -1,21 +1,26 @@
 var GameState = require('States').GameState;
 
 cc.Class({
-    "extends": cc.Component,
+    'extends': cc.Component,
 
     properties: {
         pauseOverlay: {
-            "default": null,
+            'default': null,
             type: cc.Node
         },
 
+        scoreLabel: {
+            'default': null,
+            type: cc.Label
+        },
+
         buttonAudio: {
-            "default": null,
+            'default': null,
             url: cc.AudioClip
         },
 
         game: {
-            "default": null,
+            'default': null,
             type: cc.Node
         }
 
@@ -23,6 +28,16 @@ cc.Class({
 
     // use this for initialization
     onLoad: function onLoad() {
+        /*if(game !== undefined)
+            this.scoreLabel.string = "Score: "+game.getComponent('Game').score.toString();
+            */
+        this.score = cc.sys.localStorage.getItem('score');
+        console.log('Score in GameButtonCallback: ', this.score);
+        if (this.scoreLabel !== null) {
+            console.log('SCORELABEL');
+            console.log(this.scoreLabel);
+            this.scoreLabel.string = "Score: " + this.score.toString();
+        }
         this.paused = false; // TODO: spread this to the outer world
     },
 

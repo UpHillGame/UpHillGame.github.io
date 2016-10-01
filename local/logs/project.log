@@ -1,47 +1,52 @@
-2016-09-29T20:30:38.439Z - normal: Load ~/.CocosCreator/settings.json
-2016-09-29T20:30:38.448Z - normal: checking language setting...
-2016-09-29T20:30:38.449Z - normal: Language: en
-2016-09-29T20:30:39.539Z - success: protocol editor-framework registered
-2016-09-29T20:30:39.539Z - success: protocol app registered
-2016-09-29T20:30:39.539Z - success: protocol packages registered
-2016-09-29T20:30:39.539Z - success: protocol theme registered
-2016-09-29T20:30:39.539Z - success: protocol unpack registerred
-2016-09-29T20:30:41.042Z - normal: connected!
-2016-09-29T20:30:41.045Z - normal: Check project E:\Projects\UTM
-2016-09-29T20:30:41.049Z - normal: Initializing Cocos Creator Editor
-2016-09-29T20:30:41.518Z - normal: Initializing Cocos2d
-2016-09-29T20:30:41.687Z - normal: Initializing Asset Database
-2016-09-29T20:30:41.707Z - success: protocol uuid registerred
-2016-09-29T20:30:41.707Z - success: protocol db registerred
-2016-09-29T20:30:41.707Z - success: protocol thumbnail registerred
-2016-09-29T20:30:41.708Z - normal: Loading editor/builtin packages
-2016-09-29T20:30:41.845Z - success: assets loaded
-2016-09-29T20:30:41.848Z - success: builder loaded
-2016-09-29T20:30:41.852Z - success: hierarchy loaded
-2016-09-29T20:30:41.858Z - success: inspector loaded
-2016-09-29T20:30:41.861Z - success: keystore loaded
-2016-09-29T20:30:41.866Z - success: node-library loaded
-2016-09-29T20:30:41.869Z - success: preferences loaded
-2016-09-29T20:30:41.896Z - success: project-importer loaded
-2016-09-29T20:30:41.898Z - success: project-settings loaded
-2016-09-29T20:30:41.901Z - success: ui-kit loaded
-2016-09-29T20:30:41.904Z - success: ui-grid loaded
-2016-09-29T20:30:41.909Z - success: scene loaded
-2016-09-29T20:30:41.912Z - success: sprite-editor loaded
-2016-09-29T20:30:41.917Z - success: timeline loaded
-2016-09-29T20:30:41.917Z - normal: Loading builtin packages
-2016-09-29T20:30:41.922Z - success: asset-db-debugger loaded
-2016-09-29T20:30:41.925Z - success: cocos-package loaded
-2016-09-29T20:30:41.927Z - success: code-editor loaded
-2016-09-29T20:30:41.929Z - success: color-picker loaded
-2016-09-29T20:30:41.932Z - success: console loaded
-2016-09-29T20:30:41.935Z - success: package-manager loaded
-2016-09-29T20:30:41.940Z - success: tester loaded
-2016-09-29T20:30:41.943Z - success: ui-kit-preview-extra loaded
-2016-09-29T20:30:41.946Z - success: ui-kit-preview loaded
-2016-09-29T20:30:41.948Z - success: ui-tree loaded
-2016-09-29T20:30:41.987Z - normal: Initializing project E:\Projects\UTM
-2016-09-29T20:30:41.994Z - normal: Loading packages
-2016-09-29T20:30:42.000Z - normal: Run Application
-2016-09-29T20:30:42.944Z - success: preview server running at http://localhost:7456
-2016-09-29T20:30:47.615Z - normal: 1.2.1-rc.1
+2016-10-01T15:16:39.039Z - normal: Load ~/.CocosCreator/settings.json
+2016-10-01T15:16:39.048Z - normal: checking language setting...
+2016-10-01T15:16:39.048Z - normal: Language: en
+2016-10-01T15:16:40.171Z - success: protocol editor-framework registered
+2016-10-01T15:16:40.171Z - success: protocol app registered
+2016-10-01T15:16:40.171Z - success: protocol packages registered
+2016-10-01T15:16:40.171Z - success: protocol theme registered
+2016-10-01T15:16:40.172Z - success: protocol unpack registerred
+2016-10-01T15:16:42.483Z - normal: connected!
+2016-10-01T15:16:42.487Z - normal: Check project E:\Projects\BMMP-UpHill
+2016-10-01T15:16:42.490Z - normal: Initializing Cocos Creator Editor
+2016-10-01T15:16:43.448Z - normal: Initializing Cocos2d
+2016-10-01T15:16:45.222Z - normal: Initializing Asset Database
+2016-10-01T15:16:45.268Z - success: protocol uuid registerred
+2016-10-01T15:16:45.268Z - success: protocol db registerred
+2016-10-01T15:16:45.268Z - success: protocol thumbnail registerred
+2016-10-01T15:16:45.268Z - normal: Loading editor/builtin packages
+2016-10-01T15:16:45.488Z - success: assets loaded
+2016-10-01T15:16:45.491Z - success: builder loaded
+2016-10-01T15:16:45.497Z - success: hierarchy loaded
+2016-10-01T15:16:45.502Z - success: inspector loaded
+2016-10-01T15:16:45.504Z - success: keystore loaded
+2016-10-01T15:16:45.508Z - success: node-library loaded
+2016-10-01T15:16:45.511Z - success: preferences loaded
+2016-10-01T15:16:45.544Z - success: project-importer loaded
+2016-10-01T15:16:45.546Z - success: project-settings loaded
+2016-10-01T15:16:45.549Z - success: ui-kit loaded
+2016-10-01T15:16:45.560Z - success: ui-grid loaded
+2016-10-01T15:16:45.566Z - success: scene loaded
+2016-10-01T15:16:45.568Z - success: sprite-editor loaded
+2016-10-01T15:16:45.575Z - success: timeline loaded
+2016-10-01T15:16:45.575Z - normal: Loading builtin packages
+2016-10-01T15:16:45.591Z - success: asset-db-debugger loaded
+2016-10-01T15:16:45.594Z - success: cocos-package loaded
+2016-10-01T15:16:45.596Z - success: code-editor loaded
+2016-10-01T15:16:45.608Z - success: color-picker loaded
+2016-10-01T15:16:45.613Z - success: console loaded
+2016-10-01T15:16:45.616Z - success: package-manager loaded
+2016-10-01T15:16:45.620Z - success: tester loaded
+2016-10-01T15:16:45.623Z - success: ui-kit-preview-extra loaded
+2016-10-01T15:16:45.625Z - success: ui-kit-preview loaded
+2016-10-01T15:16:45.628Z - success: ui-tree loaded
+2016-10-01T15:16:45.760Z - normal: Initializing project E:\Projects\BMMP-UpHill
+2016-10-01T15:16:45.765Z - normal: Loading packages
+2016-10-01T15:16:45.771Z - normal: Run Application
+2016-10-01T15:16:49.728Z - success: preview server running at http://localhost:7456
+2016-10-01T15:16:49.728Z - normal: Compiling scripts...
+2016-10-01T15:16:51.775Z - normal: Compiled successfully
+2016-10-01T15:16:58.104Z - normal: 1.2.1-rc.1
+2016-10-01T15:17:46.593Z - normal: Compiled successfully
+2016-10-01T15:17:48.264Z - normal: 1.2.1-rc.1
+2016-10-01T15:17:49.514Z - normal: Built to "E:\Projects\BMMP-UpHill\" successfully

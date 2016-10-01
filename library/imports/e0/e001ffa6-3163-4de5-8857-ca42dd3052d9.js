@@ -27,7 +27,7 @@ var startField = [[7, 1, 2, 2, 1, 7], [7, 1, 5, 1, 2, 1, 7], [7, 2, 1, 1, 2, 7],
 ];
 
 //Array for each individual block
-var pufferField = [[7, 1, 6, 1, 6, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 3, 1, 3, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 2, 1, 2, 1, 7], [7, 3, 2, 2, 3, 7], [7, 7, 1, 1, 1, 7, 7], [7, 1, 1, 4, 4, 7], [7, 4, 1, 4, 1, 4, 7], [7, 4, 1, 1, 1, 7], [7, 4, 1, 1, 1, 1, 7], [7, 5, 1, 5, 1, 7], [7, 1, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7], [7, 6, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7]];
+var pufferField = [[7, 1, 6, 6, 6, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 3, 1, 3, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 2, 1, 2, 1, 7], [7, 3, 2, 2, 3, 7], [7, 7, 1, 1, 1, 7, 7], [7, 1, 1, 4, 4, 7], [7, 4, 1, 4, 1, 4, 7], [7, 4, 1, 1, 1, 7], [7, 4, 1, 1, 1, 1, 7], [7, 5, 1, 5, 1, 7], [7, 1, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7], [7, 6, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7]];
 /*
  The items-array has the same dimensions as the startField. Each item will be a child of the corresponding block (seen as a layover).
  // 0.Empty, 1.antidoteLeft, 2.antidoteRight, 3.coinLeft, 4.coinRight, 5.starLeft,
@@ -172,9 +172,17 @@ cc.Class({
 
 		this.disTX = distX;
 		this.disTY = distY;
+		this.resetArrays();
 		this.initializeField();
 
 		this.game.getComponent('Game').onGameFieldLoadCallback();
+	},
+
+	resetArrays: function resetArrays() {
+		nextFirstLine = 0;
+		nextFirstLineItem = 0;
+		pufferField = [[7, 1, 6, 6, 6, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 3, 1, 3, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 2, 1, 2, 1, 7], [7, 3, 2, 2, 3, 7], [7, 7, 1, 1, 1, 7, 7], [7, 1, 1, 4, 4, 7], [7, 4, 1, 4, 1, 4, 7], [7, 4, 1, 1, 1, 7], [7, 4, 1, 1, 1, 1, 7], [7, 5, 1, 5, 1, 7], [7, 1, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7], [7, 6, 1, 1, 1, 1, 7], [7, 1, 1, 1, 1, 7]];
+		pufferFieldItems = [[0, 8, 0, 0, 0, 8, 0], [0, 8, 0, 0, 8, 0], [0, 8, 0, 0, 0, 8, 0], [0, 8, 0, 0, 8, 0], [0, 8, 0, 7, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 9, 7, 9, 0, 0], [0, 9, 7, 0, 0, 0], [0, 0, 7, 0, 7, 0, 0], [0, 0, 7, 9, 9, 0], [0, 0, 7, 7, 0, 7, 0], [0, 0, 7, 0, 8, 0], [0, 0, 0, 0, 0, 7, 0], [0, 0, 0, 7, 0, 0], [0, 0, 7, 0, 0, 0, 0], [0, 0, 0, 2, 0, 0]];
 	},
 
 	initializeField: function initializeField() {
@@ -205,7 +213,9 @@ cc.Class({
 			}
 		}
 		this.updatePlayer(speed);
-
+		/*var fieldx =  this.node.getPositionX(); //BUGGY
+  var fieldy = this.node.getPositionY();
+  this.node.setPosition(fieldx, fieldy+speed); */
 		//WENN GRENZE UEBERSCHRITTEN; DANN WIRD ZEILE GELÖSCHT
 		if (this.gameField[this.gameField.length - 1][0].getPositionY() <= this.despawnHeight) {
 			cc.log('WIR SIND ZU WEIT!');
@@ -242,6 +252,7 @@ cc.Class({
 		//TODO: move this more suitable
 		this.player.arrayPosX = mid;
 		this.player.arrayPosY = this.gameField.length - 1;
+		this.player.oldDest = startField;
 		var startpos = cc.p(startField.getPositionX(), startField.getPositionY() + this.player.offsetY);
 		return startpos;
 	},
@@ -488,6 +499,7 @@ cc.Class({
 				newItem.name = 'SlowDownBottom';
 
 				var newItem2 = cc.instantiate(this.SlowDownTop);
+				newItem2.getComponent('Item').itemtype = ItemType.Slower;
 				newItem.addChild(newItem2);
 				break;
 			default:
