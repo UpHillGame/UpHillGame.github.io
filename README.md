@@ -1,10 +1,11 @@
 # BMMP-UpHill.github.io
 
-Visit bmmp-uphill.github.io to play the game.
+Visit https://bmmp-uphill.github.io to play the game.
 
-Licenses and Sources:
+# Licenses and Sources:
 
-        Sounds:
+Sounds:
+
 button
 https://www.freesound.org/people/KorgMS2000B/sounds/54405/
 
