@@ -3,7 +3,7 @@
   "windows": {
     "main": {
       "x": -8,
-      "y": -8,
+      "y": 0,
       "width": 1924,
       "height": 1056,
       "layout": {
@@ -92,12 +92,6 @@
         "row": true,
         "type": "dock"
       }
-    },
-    "window-1475356565807": {
-      "x": 552,
-      "y": 200,
-      "width": 816,
-      "height": 639
     }
   }
 }

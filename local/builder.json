@@ -1,6 +1,6 @@
 {
   "androidStudio": false,
-  "buildPath": "E:\\Projects\\BMMP-UpHill\\",
+  "buildPath": "E:\\Projects\\BMMP-UpHill\\web",
   "debug": false,
   "keystoreAlias": "",
   "keystoreAliasPassword": "",
@@ -9,7 +9,7 @@
   "platform": "web-desktop",
   "previewHeight": 960,
   "previewWidth": 640,
-  "sourceMaps": false,
+  "sourceMaps": true,
   "template": "default",
   "useDebugKeystore": true
 }

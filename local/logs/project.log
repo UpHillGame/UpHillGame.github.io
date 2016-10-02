@@ -1,59 +1,53 @@
-2016-10-01T15:16:39.039Z - normal: Load ~/.CocosCreator/settings.json
-2016-10-01T15:16:39.048Z - normal: checking language setting...
-2016-10-01T15:16:39.048Z - normal: Language: en
-2016-10-01T15:16:40.171Z - success: protocol editor-framework registered
-2016-10-01T15:16:40.171Z - success: protocol app registered
-2016-10-01T15:16:40.171Z - success: protocol packages registered
-2016-10-01T15:16:40.171Z - success: protocol theme registered
-2016-10-01T15:16:40.172Z - success: protocol unpack registerred
-2016-10-01T15:16:42.483Z - normal: connected!
-2016-10-01T15:16:42.487Z - normal: Check project E:\Projects\BMMP-UpHill
-2016-10-01T15:16:42.490Z - normal: Initializing Cocos Creator Editor
-2016-10-01T15:16:43.448Z - normal: Initializing Cocos2d
-2016-10-01T15:16:45.222Z - normal: Initializing Asset Database
-2016-10-01T15:16:45.268Z - success: protocol uuid registerred
-2016-10-01T15:16:45.268Z - success: protocol db registerred
-2016-10-01T15:16:45.268Z - success: protocol thumbnail registerred
-2016-10-01T15:16:45.268Z - normal: Loading editor/builtin packages
-2016-10-01T15:16:45.488Z - success: assets loaded
-2016-10-01T15:16:45.491Z - success: builder loaded
-2016-10-01T15:16:45.497Z - success: hierarchy loaded
-2016-10-01T15:16:45.502Z - success: inspector loaded
-2016-10-01T15:16:45.504Z - success: keystore loaded
-2016-10-01T15:16:45.508Z - success: node-library loaded
-2016-10-01T15:16:45.511Z - success: preferences loaded
-2016-10-01T15:16:45.544Z - success: project-importer loaded
-2016-10-01T15:16:45.546Z - success: project-settings loaded
-2016-10-01T15:16:45.549Z - success: ui-kit loaded
-2016-10-01T15:16:45.560Z - success: ui-grid loaded
-2016-10-01T15:16:45.566Z - success: scene loaded
-2016-10-01T15:16:45.568Z - success: sprite-editor loaded
-2016-10-01T15:16:45.575Z - success: timeline loaded
-2016-10-01T15:16:45.575Z - normal: Loading builtin packages
-2016-10-01T15:16:45.591Z - success: asset-db-debugger loaded
-2016-10-01T15:16:45.594Z - success: cocos-package loaded
-2016-10-01T15:16:45.596Z - success: code-editor loaded
-2016-10-01T15:16:45.608Z - success: color-picker loaded
-2016-10-01T15:16:45.613Z - success: console loaded
-2016-10-01T15:16:45.616Z - success: package-manager loaded
-2016-10-01T15:16:45.620Z - success: tester loaded
-2016-10-01T15:16:45.623Z - success: ui-kit-preview-extra loaded
-2016-10-01T15:16:45.625Z - success: ui-kit-preview loaded
-2016-10-01T15:16:45.628Z - success: ui-tree loaded
-2016-10-01T15:16:45.760Z - normal: Initializing project E:\Projects\BMMP-UpHill
-2016-10-01T15:16:45.765Z - normal: Loading packages
-2016-10-01T15:16:45.771Z - normal: Run Application
-2016-10-01T15:16:49.728Z - success: preview server running at http://localhost:7456
-2016-10-01T15:16:49.728Z - normal: Compiling scripts...
-2016-10-01T15:16:51.775Z - normal: Compiled successfully
-2016-10-01T15:16:58.104Z - normal: 1.2.1-rc.1
-2016-10-01T15:17:46.593Z - normal: Compiled successfully
-2016-10-01T15:17:48.264Z - normal: 1.2.1-rc.1
-2016-10-01T15:17:49.514Z - normal: Built to "E:\Projects\BMMP-UpHill\" successfully
-2016-10-01T15:51:07.209Z - normal: Compiled successfully
-2016-10-01T15:51:09.006Z - normal: 1.2.1-rc.1
-2016-10-01T15:51:10.746Z - normal: Built to "E:\Projects\BMMP-UpHill\" successfully
-2016-10-01T21:09:52.932Z - normal: Compiled successfully
-2016-10-01T21:09:55.836Z - normal: 1.2.1-rc.1
-2016-10-01T21:09:58.258Z - normal: Built to "E:\Projects\BMMP-UpHill\" successfully
-2016-10-01T21:16:28.858Z - info: shutdown preview server
+2016-10-02T07:33:14.661Z - normal: Load ~/.CocosCreator/settings.json
+2016-10-02T07:33:14.663Z - normal: checking language setting...
+2016-10-02T07:33:14.663Z - normal: Language: en
+2016-10-02T07:33:15.769Z - success: protocol editor-framework registered
+2016-10-02T07:33:15.769Z - success: protocol app registered
+2016-10-02T07:33:15.769Z - success: protocol packages registered
+2016-10-02T07:33:15.769Z - success: protocol theme registered
+2016-10-02T07:33:15.770Z - success: protocol unpack registerred
+2016-10-02T07:33:17.264Z - normal: connected!
+2016-10-02T07:33:17.283Z - normal: Check project E:\Projects\BMMP-UpHill
+2016-10-02T07:33:17.286Z - normal: Initializing Cocos Creator Editor
+2016-10-02T07:33:18.926Z - normal: Initializing Cocos2d
+2016-10-02T07:33:20.678Z - normal: Initializing Asset Database
+2016-10-02T07:33:20.759Z - success: protocol uuid registerred
+2016-10-02T07:33:20.759Z - success: protocol db registerred
+2016-10-02T07:33:20.759Z - success: protocol thumbnail registerred
+2016-10-02T07:33:20.759Z - normal: Loading editor/builtin packages
+2016-10-02T07:33:21.053Z - success: assets loaded
+2016-10-02T07:33:21.053Z - success: builder loaded
+2016-10-02T07:33:21.070Z - success: hierarchy loaded
+2016-10-02T07:33:21.074Z - success: inspector loaded
+2016-10-02T07:33:21.074Z - success: keystore loaded
+2016-10-02T07:33:21.074Z - success: node-library loaded
+2016-10-02T07:33:21.074Z - success: preferences loaded
+2016-10-02T07:33:21.110Z - success: project-importer loaded
+2016-10-02T07:33:21.112Z - success: project-settings loaded
+2016-10-02T07:33:21.114Z - success: ui-kit loaded
+2016-10-02T07:33:21.114Z - success: ui-grid loaded
+2016-10-02T07:33:21.114Z - success: scene loaded
+2016-10-02T07:33:21.114Z - success: sprite-editor loaded
+2016-10-02T07:33:21.133Z - success: timeline loaded
+2016-10-02T07:33:21.133Z - normal: Loading builtin packages
+2016-10-02T07:33:21.135Z - success: asset-db-debugger loaded
+2016-10-02T07:33:21.135Z - success: cocos-package loaded
+2016-10-02T07:33:21.135Z - success: code-editor loaded
+2016-10-02T07:33:21.161Z - success: color-picker loaded
+2016-10-02T07:33:21.165Z - success: console loaded
+2016-10-02T07:33:21.165Z - success: package-manager loaded
+2016-10-02T07:33:21.165Z - success: tester loaded
+2016-10-02T07:33:21.165Z - success: ui-kit-preview-extra loaded
+2016-10-02T07:33:21.165Z - success: ui-kit-preview loaded
+2016-10-02T07:33:21.182Z - success: ui-tree loaded
+2016-10-02T07:33:21.272Z - normal: Initializing project E:\Projects\BMMP-UpHill
+2016-10-02T07:33:21.276Z - normal: Loading packages
+2016-10-02T07:33:21.276Z - normal: Run Application
+2016-10-02T07:33:23.319Z - success: preview server running at http://localhost:7456
+2016-10-02T07:33:29.731Z - normal: 1.2.1-rc.1
+2016-10-02T07:33:39.495Z - warn: Profile builder-local warning: reset profile field: previewWidth
+2016-10-02T07:33:39.495Z - warn: Profile builder-local warning: reset profile field: previewHeight
+2016-10-02T07:34:22.553Z - normal: Compiled successfully
+2016-10-02T07:34:24.246Z - normal: 1.2.1-rc.1
+2016-10-02T07:34:25.608Z - normal: Built to "E:\Projects\BMMP-UpHill\web" successfully
+2016-10-02T07:36:09.515Z - info: shutdown preview server

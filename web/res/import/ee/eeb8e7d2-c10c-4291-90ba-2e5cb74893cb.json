@@ -1,1 +1,0 @@
-[{"__type__":"cc.SpriteFrame","content":{"name":"grass","texture":"5c3129b1-e9ba-48de-9bf7-c0ebd950d19a","rect":[0,0,83,96],"offset":[0,0],"originalSize":[83,96]}},{"__type__":"cc.SpriteFrame","content":{"name":"antidote_left","texture":"37fb1fcc-8206-4d01-9fc0-2a47945be877","rect":[28,22,27,53],"offset":[0,-0.5],"originalSize":[83,96]}}]
