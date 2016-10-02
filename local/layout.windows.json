@@ -93,33 +93,11 @@
         "type": "dock"
       }
     },
-    "window-1475356182359": {
-      "x": 702,
-      "y": 150,
-      "width": 516,
-      "height": 739,
-      "layout": {
-        "docks": [
-          {
-            "active": 0,
-            "height": 700,
-            "panels": [
-              "builder"
-            ],
-            "type": "panel",
-            "width": 500
-          }
-        ],
-        "no-collapse": true,
-        "row": false,
-        "type": "dock"
-      }
-    },
-    "worker": {
-      "x": 760,
-      "y": 370,
-      "width": 400,
-      "height": 300
+    "window-1475356565807": {
+      "x": 552,
+      "y": 200,
+      "width": 816,
+      "height": 639
     }
   }
 }
