@@ -1,6 +1,11 @@
 # BMMP-UpHill.github.io
 
+<br>
+<br>
 Visit https://bmmp-uphill.github.io to play the game.
+<br>
+<br>
+<br>
 
 # Licenses and Sources:
 
@@ -34,10 +39,10 @@ willhelm
 https://www.freesound.org/people/SweetNeo85/sounds/13797/
 
 water drop
+http://www.orangefreesounds.com/water-splashing-sound-effect/
 
 water
 http://www.orangefreesounds.com/forest-stream-running-water-sound/
-http://www.orangefreesounds.com/water-splashing-sound-effect/
 
 stone cracking
 https://www.youtube.com/watch?v=7gt5K8Lk2B0
