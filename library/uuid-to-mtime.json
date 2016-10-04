@@ -170,13 +170,13 @@
     "relativePath": "prefabs"
   },
   "e7259a3c-bf88-4933-b3f4-faaab33acd30": {
-    "asset": 1474987691239,
-    "meta": 1474992055494,
+    "asset": 1475484636158,
+    "meta": 1475484636195,
     "relativePath": "prefabs\\blocks\\Dirt.prefab"
   },
   "d9a57a41-e0af-456b-b79b-7d4e4e36d6f7": {
-    "asset": 1474987691239,
-    "meta": 1474992055498,
+    "asset": 1475484665420,
+    "meta": 1475484665433,
     "relativePath": "prefabs\\blocks\\Empty.prefab"
   },
   "a29a571d-9a93-40e7-a7d3-89657e10f29b": {
@@ -185,28 +185,28 @@
     "relativePath": "prefabs\\items"
   },
   "ded0a577-cc46-40a9-8165-599b67fd2f7d": {
-    "asset": 1474987691239,
-    "meta": 1474992055502,
+    "asset": 1475484685419,
+    "meta": 1475484685428,
     "relativePath": "prefabs\\blocks\\Grass.prefab"
   },
   "b0593ec3-8aef-4ecf-ad50-854df4e5c7e0": {
-    "asset": 1475341328904,
-    "meta": 1475341328916,
+    "asset": 1475582208411,
+    "meta": 1475582208425,
     "relativePath": "prefabs\\items\\antidote_right.prefab"
   },
   "c25d7c72-6e7f-4c30-94e2-fdaf7b0b2819": {
-    "asset": 1475355860871,
-    "meta": 1475355860883,
+    "asset": 1475582201104,
+    "meta": 1475582201122,
     "relativePath": "prefabs\\items\\antidote_left.prefab"
   },
   "7ff6febc-5d69-4595-8042-70135bfc24b5": {
-    "asset": 1474987691239,
-    "meta": 1474992055506,
+    "asset": 1475582214242,
+    "meta": 1475582214252,
     "relativePath": "prefabs\\items\\blocked_bush.prefab"
   },
   "fa06fc7a-f6d2-4740-b32c-6889c557c994": {
-    "asset": 1474987691254,
-    "meta": 1474992055506,
+    "asset": 1475582222136,
+    "meta": 1475582222144,
     "relativePath": "prefabs\\items\\blocked_stone.prefab"
   },
   "4810e351-b48c-4ea0-a025-c03ebf401895": {
@@ -215,49 +215,44 @@
     "relativePath": "prefabs\\items\\coin_left.prefab"
   },
   "17206c6f-5aec-4957-9b45-d3887d5a4e96": {
-    "asset": 1475355828847,
-    "meta": 1475355828880,
+    "asset": 1475582239622,
+    "meta": 1475582239650,
     "relativePath": "prefabs\\items\\coin_right.prefab"
   },
   "67f25036-befa-4353-93ca-a72710401bc9": {
-    "asset": 1474987691254,
-    "meta": 1474992055530,
+    "asset": 1475582250896,
+    "meta": 1475582250905,
     "relativePath": "prefabs\\items\\slow_down_top.prefab"
   },
   "3ce2fb28-4d90-4499-b001-74c4b0f62fa0": {
-    "asset": 1474987691254,
-    "meta": 1474992055531,
+    "asset": 1475582244993,
+    "meta": 1475582245002,
     "relativePath": "prefabs\\items\\slow_down_bottom.prefab"
   },
   "35b5a2ba-d4ea-4e3b-a6c6-61cde430b17a": {
-    "asset": 1475341261615,
-    "meta": 1475341261627,
+    "asset": 1475582263106,
+    "meta": 1475582263118,
     "relativePath": "prefabs\\items\\star_right.prefab"
   },
   "41e4c83c-eed8-4fa2-b99a-3b8a423b3c5a": {
-    "asset": 1475355938238,
-    "meta": 1475355938251,
+    "asset": 1475582256853,
+    "meta": 1475582256863,
     "relativePath": "prefabs\\items\\star_left.prefab"
   },
   "2e0fa12e-4589-41eb-8612-b6f1961efe38": {
-    "asset": 1474987691239,
-    "meta": 1474992055537,
+    "asset": 1475484886885,
+    "meta": 1475484886908,
     "relativePath": "prefabs\\blocks\\Poison.prefab"
   },
   "721f78c8-0f7c-4be9-8e6f-7328018efc8c": {
-    "asset": 1474987691239,
-    "meta": 1474992055537,
+    "asset": 1475484912901,
+    "meta": 1475484912913,
     "relativePath": "prefabs\\blocks\\Spike.prefab"
   },
   "732edbcf-8fe6-4143-822f-f0f091159264": {
-    "asset": 1474987691239,
-    "meta": 1474992055553,
+    "asset": 1475484933962,
+    "meta": 1475484933973,
     "relativePath": "prefabs\\blocks\\Switcher.prefab"
-  },
-  "89f7f1d0-975f-425e-8f7a-e6903232116a": {
-    "asset": 1474987691239,
-    "meta": 1474992055554,
-    "relativePath": "prefabs\\blocks\\Trapdoor.prefab"
   },
   "baa8e25c-a3cb-4334-976b-2691fbd8bb70": {
     "asset": 1475333673784,
@@ -293,11 +288,6 @@
     "asset": 1475333673982,
     "meta": 1475335008175,
     "relativePath": "scripts\\gamefield\\blocks"
-  },
-  "0cf80bda-e222-425d-90d7-6d2c206359a6": {
-    "asset": 1474987691270,
-    "meta": 1474992057020,
-    "relativePath": "scripts\\gamefield\\Block.js"
   },
   "fe13cea3-8bdd-4818-a01a-0f5706a5f48a": {
     "asset": 1475168850726,
@@ -1305,8 +1295,8 @@
     "relativePath": "scenes\\GameOverScene.fire"
   },
   "c80de14e-2d95-49f8-8c8f-e804be18efb5": {
-    "asset": 1475356071264,
-    "meta": 1475356071292,
+    "asset": 1475580985088,
+    "meta": 1475580985113,
     "relativePath": "scenes\\GameScene.fire"
   },
   "a9f9ca02-c4fa-469c-9829-b319d17f5932": {
@@ -1328,11 +1318,6 @@
     "asset": 1475333619143,
     "meta": 1475335006553,
     "relativePath": "scenes\\menu\\Startmenu.fire"
-  },
-  "7288f8ec-8971-4094-bf8b-8867a743c3ab": {
-    "asset": 1475055133797,
-    "meta": 1475079404798,
-    "relativePath": "scripts\\scenescripts\\CloudAnimation.js"
   },
   "69e76f74-f35c-4635-b0d9-066ac344b16e": {
     "asset": 1475333619189,
@@ -1370,8 +1355,8 @@
     "relativePath": "animations\\blocks"
   },
   "98d49f73-3b2d-49d5-bc1b-316cdf88c662": {
-    "asset": 1475333673601,
-    "meta": 1475335006522,
+    "asset": 1475485136640,
+    "meta": 1475485298743,
     "relativePath": "prefabs\\blocks"
   },
   "4ab92488-d54c-4745-bb91-ac091e6af3c5": {
@@ -1505,8 +1490,8 @@
     "relativePath": "audio\\source.txt"
   },
   "f79e4c13-986d-462f-97ee-dc75bc698407": {
-    "asset": 1475168850711,
-    "meta": 1475168911528,
+    "asset": 1475582903414,
+    "meta": 1475582903437,
     "relativePath": "prefabs\\blocks\\Water_Border.prefab"
   },
   "5c12d32a-5771-4a88-98d5-e5fc12221f38": {
@@ -1529,24 +1514,39 @@
     "meta": 1475172083659,
     "relativePath": "scripts\\gamefield\\blocks\\Poison.js"
   },
-  "dfcfecc0-01c2-4000-b5cf-8881d5263d9d": {
-    "asset": 1475333619189,
-    "meta": 1475335008489,
-    "relativePath": "scripts\\gameobjects\\Player.js"
+  "990ecc5b-f116-47ba-8518-92faafac9c3b": {
+    "asset": 1475582439677,
+    "meta": 1475582439707,
+    "relativePath": "prefabs\\blocks\\Trapdoor.prefab"
   },
-  "076eff82-6ea5-4214-afd0-f6c72b2fc522": {
-    "asset": 1475333619174,
-    "meta": 1475335007802,
-    "relativePath": "scripts\\Game.js"
-  },
-  "e001ffa6-3163-4de5-8857-ca42dd3052d9": {
-    "asset": 1475333619174,
-    "meta": 1475335008259,
-    "relativePath": "scripts\\gamefield\\GameField.js"
+  "0cf80bda-e222-425d-90d7-6d2c206359a6": {
+    "asset": 1475582483722,
+    "meta": 1475582485242,
+    "relativePath": "scripts\\gamefield\\Block.js"
   },
   "a9d5f84c-a434-41ee-b9f0-833974635f59": {
-    "asset": 1475333619189,
-    "meta": 1475335008488,
+    "asset": 1475611919871,
+    "meta": 1475612058428,
     "relativePath": "scripts\\gameobjects\\Item.js"
+  },
+  "e001ffa6-3163-4de5-8857-ca42dd3052d9": {
+    "asset": 1475612496326,
+    "meta": 1475612516225,
+    "relativePath": "scripts\\gamefield\\GameField.js"
+  },
+  "076eff82-6ea5-4214-afd0-f6c72b2fc522": {
+    "asset": 1475613464863,
+    "meta": 1475613473723,
+    "relativePath": "scripts\\Game.js"
+  },
+  "dfcfecc0-01c2-4000-b5cf-8881d5263d9d": {
+    "asset": 1475613770038,
+    "meta": 1475613785070,
+    "relativePath": "scripts\\gameobjects\\Player.js"
+  },
+  "7288f8ec-8971-4094-bf8b-8867a743c3ab": {
+    "asset": 1475614203716,
+    "meta": 1475614244885,
+    "relativePath": "scripts\\scenescripts\\CloudAnimation.js"
   }
 }

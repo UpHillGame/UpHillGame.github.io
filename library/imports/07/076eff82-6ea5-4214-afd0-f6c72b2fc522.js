@@ -81,7 +81,8 @@ cc.Class({
         this.gamefield.player = this.player;
 
         // Player is assembled. set all needed graphical information
-        this.player.node.setPosition(this.gamefield.getStartPosition());
+        //this.player.node.setPosition(this.gamefield.getStartPosition());
+        this.gamefield.setPlayerStart(this.player);
         this.player.node.setLocalZOrder(1000);
         this.player.dx = this.gamefield.disTX / 2; //only half the distance on x!!
         this.player.dy = this.gamefield.disTY;
@@ -90,11 +91,9 @@ cc.Class({
     // Called when gamefield is initalized ( onLoad() has finished )
     onGameFieldLoadCallback: function onGameFieldLoadCallback() {},
 
-    //TODO hier wird ein Fehler verursacht, wenn Gift NACH einem Switcher kommt!
     validateMove: function validateMove(dir) {
 
         if (this.state === GameState.GameOver) {
-            //console.log('Du darfst nicht bewegen, weil du gameOver bist');
             return false;
         }
 
@@ -102,9 +101,6 @@ cc.Class({
             //Player already jumping/falling -> neglect input
             return false;
         }
-        //var currentfield = this.player.oldDest;
-        //console.log('BlockType: ', this.gamefield.getBlockType(this.gamefield.getJumpField(dir)));
-        //console.log('var destfield = ', destfield);
 
         // Handle swaped case
         if (this.player.isSwaped) {
@@ -113,36 +109,29 @@ cc.Class({
 
         // Handle slowed case
         if (this.player.isSlowed) {
-            console.log("PRESSCOUNT" + pressCount);
             pressCount++;
             if (pressCount < 3) {
-                console.log("STILL SLOWED");
                 return false;
             } else {
-                console.log("RELEASE" + pressCount);
                 pressCount = 0;
                 this.player.isSlowed = false;
-                //return true;
             }
         }
 
         this.destfield = this.gamefield.getJumpField(dir);
-        //console.log('destfield = ', this.destfield);
-        //console.log('destfield = ', this.destfield.name);
-        //steppedBlock is necessarry for movement-collisioncontroll
-        var steppedBlock = this.destfield.getComponent(this.destfield.name);
-
+        console.log(this.destfield);
+        var steppedBlock = this.destfield.getComponent('Block');
+        console.log(steppedBlock);
         if (steppedBlock.isBlocked) {
             return false;
         }
         this.player.isSwaped = false;
 
-        // !!! INSERT lines at end of file when bugs happen here !!!
-
         //
         //Move was correct.
         //
         //Change player direction
+        if (this.player.dir != dir) this.animationNeedsUpdate = true;
         this.player.dir = dir;
         this.incrementScore(1);
         this.scoreLabel.string = this.score.toString();
@@ -167,7 +156,7 @@ cc.Class({
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos(); // Change array position after jump or bugs will spawn
                             if (self.player.oldDest !== undefined) {
-                                self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false;
+                                self.player.oldDest.getComponent('Block').playerOnTop = false;
                             }
                         }
                         break;
@@ -178,7 +167,7 @@ cc.Class({
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos();
                             if (self.player.oldDest !== undefined) {
-                                self.player.oldDest.getComponent(self.player.oldDest.name).playerOnTop = false;
+                                self.player.oldDest.getComponent('Block').playerOnTop = false;
                             }
                         }
                         break;
@@ -220,6 +209,7 @@ cc.Class({
         if (this.state === GameState.GameOver) {
             this.storage.setItem('score', this.score);
             cc.director.loadScene('GameOverScene');
+            this.state = GameState.Loading;
         }
     },
 
@@ -231,34 +221,34 @@ cc.Class({
             updateAccess = false;
             switch (ySpeed) {
                 case 8:
-                    updateAccess = this.gamefield.updateField(-0.3);
+                    updateAccess = this.gamefield.updateFieldPosition(-0.3);
                     break;
                 case 7:
-                    updateAccess = this.gamefield.updateField(-0.4);
+                    updateAccess = this.gamefield.updateFieldPosition(-0.4);
                     break;
                 case 6:
-                    updateAccess = this.gamefield.updateField(-1);
+                    updateAccess = this.gamefield.updateFieldPosition(-1);
                     break;
                 case 5:
-                    updateAccess = this.gamefield.updateField(-1.5);
+                    updateAccess = this.gamefield.updateFieldPosition(-1.5);
                     break;
                 case 4:
-                    updateAccess = this.gamefield.updateField(-2);
+                    updateAccess = this.gamefield.updateFieldPosition(-2);
                     break;
                 case 3:
-                    updateAccess = this.gamefield.updateField(-4);
+                    updateAccess = this.gamefield.updateFieldPosition(-4);
                     break;
                 case 2:
-                    updateAccess = this.gamefield.updateField(-8);
+                    updateAccess = this.gamefield.updateFieldPosition(-8);
                     break;
                 case 1:
-                    updateAccess = this.gamefield.updateField(-12);
+                    updateAccess = this.gamefield.updateFieldPosition(-12);
                     break;
                 case 0:
-                    updateAccess = this.gamefield.updateField(-20);
+                    updateAccess = this.gamefield.updateFieldPosition(-20);
                     break;
                 default:
-                    updateAccess = this.gamefield.updateField(-0.3);
+                    updateAccess = this.gamefield.updateFieldPosition(-0.3);
                     break;
             }
         }
@@ -294,86 +284,4 @@ cc.Class({
             item.onPickUpCallback(this.player);
         }
     }
-
 });
-/*switch(destfield){
-    case 'Grass':
-        //console.log('case Grass');
-        if(!this.gamefield.getJumpField(dir).getComponent('Grass').isBlocked){
-            ret = true;
-        }
-        //steppedBlock is necessarry for Collisioncontroll
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Grass');
-        whichStep = Step.Grass;
-        break;
-    case 'Dirt':
-        //console.log('case dirt');
-        if(!this.gamefield.getJumpField(dir).getComponent('Dirt').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Dirt');
-        whichStep = Step.Dirt;
-        break;
-    case 'Trapdoor':
-        //console.log('case Trapdoor');
-        if(!this.gamefield.getJumpField(dir).getComponent('Trapdoor').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Trapdoor');
-        whichStep = Step.Trapdoor;
-        break;
-    case 'Empty':
-        //console.log('case Empty');
-        if(!this.gamefield.getJumpField(dir).getComponent('Empty').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Empty');
-        whichStep = Step.Empty;
-        break;
-    case 'Water_Border':
-        if(!this.gamefield.getJumpField(dir).getComponent('Empty').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Empty');
-        whichStep = Step.Empty;
-        break;
-    case 'Poison':
-        //console.log('case Poison');
-        if(!this.gamefield.getJumpField(dir).getComponent('Poison').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Poison');
-        whichStep = Step.Poison;
-        break;
-    case 'Switcher':
-        //console.log('case Switcher');
-        if(!this.gamefield.getJumpField(dir).getComponent('Switcher').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Switcher');
-        whichStep = Step.Switcher;
-        break;
-    case 'Spike':
-        //console.log('case Spike');
-        if(!this.gamefield.getJumpField(dir).getComponent('Spike').isBlocked){
-            ret = true;
-        }
-        this.steppedBlock = this.gamefield.getJumpField(dir).getComponent('Spike');
-        whichStep = Step.Spike;
-        //console.log('steppedBlock auf Spike gesetzt');
-        //console.log(this.steppedBlock);
-        break;
-    default:
-        ret = true;
-        break;
-}*/
-
-/*var destfield = this.gamefield.getJumpField(dir); // Field player wants to jump at
- console.log('M: validatemMove');
- console.log('BlockType = ', this.gamefield.getBlockType(this.gamefield.getJumpField(dir)));
- this.steppedBlock = destfield.getComponent('Block');
- if(this.steppedBlock !== null){
- if(this.steppedBlock.isBlocked){    // Block is...blocked
- return false;
- }
- }*/

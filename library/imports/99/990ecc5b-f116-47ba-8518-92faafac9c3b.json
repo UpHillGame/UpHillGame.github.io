@@ -39,8 +39,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320,
-      "y": 480
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -111,7 +111,7 @@
     "playOnLoad": false
   },
   {
-    "__type__": "1c710YvWvBAcqTBB0WMuN9v",
+    "__type__": "0cf80va4iJCXZDXbSwgY1mm",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -120,15 +120,20 @@
     "_enabled": true,
     "isBlocked": false,
     "hasItem": false,
-    "blocktype": 0,
-    "item": null
+    "isDeadly": false,
+    "blocktype": 6,
+    "item": null,
+    "onSteppedSound": null,
+    "defaultSound": null
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
-    "fileId": "97af6QhxbpFC76zfmdHM+sT"
+    "asset": {
+      "__uuid__": "990ecc5b-f116-47ba-8518-92faafac9c3b"
+    },
+    "fileId": "df388ORVdNEp5q/VyycnvfZ"
   }
 ]

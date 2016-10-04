@@ -79,9 +79,12 @@ cc.Class({
         //register player at game for processing player logic
         this.game.getComponent('Game').player = this;
 
+        if (!this.animation) // Init animation
+            this.animation = this.getComponent(cc.Animation);
+
         //Init timers
         this.poisonTmp = this.poisonTimer;
-        this.invincibiltyTmp = this.invincibiltyTimer; //Henri fragen ob man properties speichern kann
+        this.invincibiltyTmp = this.invincibiltyTimer;
 
         this.movestate = PlayerMovementState.Standing;
         this.isMoving = false;
@@ -118,6 +121,7 @@ cc.Class({
     changeGameState: function changeGameState() {
         if (!this.isAlive) this.game.getComponent('Game').state = GameState.GameOver;
     },
+
     changeGameFallState: function changeGameFallState() {
         console.log("Alive: " + this.isAlive);
         if (this.isAlive) this.isAlive = false;
@@ -135,13 +139,10 @@ cc.Class({
     },
 
     blockStepped: function blockStepped(player, game) {
-        this.gAme = game;
-        var steppedBlock = this.destfield.getComponent(this.destfield.name);
-        console.log('STEPPED BLOCK: ', steppedBlock);
-        console.log(this.destfield.name);
+        var steppedBlock = this.destfield.getComponent('Block');
         steppedBlock.onStepCallback(this, game);
         var item = steppedBlock.getComponentInChildren('Item');
-        if (item !== null) item.onPickUpCallback(this, this.gAme);
+        if (item !== null) item.onPickUpCallback(this, game);
     },
     //
     // Movement and Actions
@@ -177,6 +178,7 @@ cc.Class({
     },
 
     switchPlayerAppearance: function switchPlayerAppearance() {
+        this.animationRunning = false; //Force player update every jump
         this.updated = this.updateAnimation();
         if (this.updated) // if animations is running dont go to sprite frame changing
             return;
@@ -237,7 +239,7 @@ cc.Class({
             return;
         }
 
-        if (this.isPoisoned) cc.audioEngine.playEffect(this.poisonedAudio, false);
+        if (this.isPoisoned) cc.audioEngine.playEffect(this.poisonedAudio, true);
 
         switch (this.movestate) {
             case PlayerMovementState.Jumping:
@@ -258,20 +260,20 @@ cc.Class({
     update: function update(dt) {
         if (this.isAlive) {
             this.updateTimers(dt);
-            //this.updateAnimation();
+            this.updateAnimation();
         }
     },
 
     updateAnimation: function updateAnimation() {
-        if (!this.animation) // Init animation
-            this.animation = this.getComponent(cc.Animation);
         if (!this.isPoisoned && !this.isInvincible) {
             //NICE TO HAVE: no bools
             this.animation.stop();
+            this.animationRunning = false;
             return false;
         }
 
-        if (this.isPoisoned || this.isInvincible) this.animation.play(this.getAnimation());
+        if ((this.isPoisoned || this.isInvincible) && !this.animationRunning) this.animation.play(this.getAnimation());
+        this.animationRunning = true;
         return true;
     },
 

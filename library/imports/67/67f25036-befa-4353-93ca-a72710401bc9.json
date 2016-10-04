@@ -97,21 +97,21 @@
       "__id__": 1
     },
     "_enabled": true,
-    "itemtype": 999,
+    "itemtype": 1004,
     "itemstate": 0,
     "activitystate": 0,
-    "sprite": null,
     "collectRadius": 0,
     "itemValue": 0,
-    "itemTimer": 0,
-    "block": null
+    "itemTimer": 0
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "67f25036-befa-4353-93ca-a72710401bc9"
+    },
     "fileId": "b7c5ejqYxNKyo5oPrtAt2RC"
   }
 ]

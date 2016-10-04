@@ -15,6 +15,9 @@ var spawnOffSetY = 200;
 var despawnOffSetY = -100;
 var ySpawnPosition = 485;
 
+var floatAboveCube = [1, 2, 3, 4, 5, 6];
+var rightOnTopOfCube = [7, 8, 9, 10];
+
 var startField = [[7, 1, 2, 2, 1, 7], [7, 1, 5, 1, 2, 1, 7], [7, 2, 1, 1, 2, 7], [7, 2, 1, 1, 1, 2, 7], [7, 2, 1, 1, 2, 7], [7, 1, 2, 1, 5, 1, 7], [7, 1, 2, 2, 1, 7], [7, 1, 1, 2, 1, 1, 7]
 /*[7,1,1,1,1,0],
  [7,1,1,1,1,1,0],
@@ -103,9 +106,6 @@ cc.Class({
 		},
 
 		//Items start here
-		// 0.Empty, 1.antidoteLeft, 2.antidoteRight, 3.coinLeft, 4.coinRight, 5.starLeft,
-		// 6.starRight, 7.BlockedBush, 8.BlockedStone, 9.SlowDownBottom, 9.SlowDownTop
-		//TODO: 10.WaterLeft, 11.WaterRight
 		AntidoteL: { //1		AntidoteL
 			'default': null,
 			type: cc.Prefab
@@ -186,7 +186,6 @@ cc.Class({
 	},
 
 	initializeField: function initializeField() {
-
 		for (var y = 0; y < startField.length; y++) {
 			this.gameField[y] = [];
 			for (var x = 0; x < startField[y].length; x++) {
@@ -195,8 +194,6 @@ cc.Class({
 				} else {
 					newCube = this.spawnCube(startX + x * distX - distX / 2, startY - distY * y, startField[y][x], startFieldItems[y][x]);
 				}
-				//cc.log('Adding new cube: ');
-				//cc.log(newCube);
 				this.gameField[y][x] = newCube;
 			}
 		}
@@ -204,7 +201,7 @@ cc.Class({
 
 	/* Displaces the entire gamefield by *Speed*-Pixel
   * In case border is crossed -> delete lowest row */
-	updateField: function updateField(speed) {
+	updateFieldPosition: function updateFieldPosition(speed) {
 		for (var y = 0; y < this.gameField.length; y++) {
 			for (var x = 0; x < this.gameField[y].length; x++) {
 				var posX = this.gameField[y][x].getPositionX();
@@ -212,27 +209,24 @@ cc.Class({
 				this.gameField[y][x].setPosition(posX, posY + speed);
 			}
 		}
-		this.updatePlayer(speed);
+		this.updatePlayerPosition(speed);
 		/*var fieldx =  this.node.getPositionX(); //BUGGY
   var fieldy = this.node.getPositionY();
   this.node.setPosition(fieldx, fieldy+speed); */
-		//WENN GRENZE UEBERSCHRITTEN; DANN WIRD ZEILE GELÖSCHT
 		if (this.gameField[this.gameField.length - 1][0].getPositionY() <= this.despawnHeight) {
-			cc.log('WIR SIND ZU WEIT!');
 			this.destroyLine(this.gameField.length - 1);
 			this.rearrangeGameField();
 		}
 		return true;
 	},
 
-	updatePlayer: function updatePlayer(speed) {
+	updatePlayerPosition: function updatePlayerPosition(speed) {
 		var x = this.player.node.getPositionX();
 		var y = this.player.node.getPositionY();
 		this.player.node.setPosition(x, y + speed);
 	},
 
 	updatePlayerArrayPos: function updatePlayerArrayPos() {
-
 		if (this.gameField[this.player.arrayPosY].length % 2 == 0) {
 			if (this.player.dir < 0) {
 				this.player.arrayPosX = this.player.arrayPosX + 1;
@@ -246,15 +240,14 @@ cc.Class({
 		this.player.arrayPosY = this.player.arrayPosY - 1;
 	},
 
-	getStartPosition: function getStartPosition() {
+	setPlayerStart: function setPlayerStart(player) {
 		var mid = Math.round(Number(this.gameField[this.gameField.length - 1].length / 2)) - 1;
 		var startField = this.gameField[this.gameField.length - 1][mid];
-		//TODO: move this more suitable
-		this.player.arrayPosX = mid;
-		this.player.arrayPosY = this.gameField.length - 1;
-		this.player.oldDest = startField;
-		var startpos = cc.p(startField.getPositionX(), startField.getPositionY() + this.player.offsetY);
-		return startpos;
+		player.arrayPosX = mid;
+		player.arrayPosY = this.gameField.length - 1;
+		player.oldDest = startField;
+		var startpos = cc.p(startField.getPositionX(), startField.getPositionY() + player.offsetY);
+		player.node.setPosition(startpos);
 	},
 
 	getJumpField: function getJumpField(dir) {
@@ -273,10 +266,8 @@ cc.Class({
 		}
 	},
 
-	//TODO: destroy items on that line
 	destroyLine: function destroyLine(line) {
 		for (var i = 0; i < this.gameField[line].length; i++) {
-			//this.gameField[line][i].destroy();
 			this.destroyBlock(this.gameField[line][i]);
 		}
 	},
@@ -292,258 +283,173 @@ cc.Class({
 	},
 
 	rearrangeGameField: function rearrangeGameField() {
-		//cc.log('M: rearrangeGameField')
-		var returnA = [];
+		var newarray = [];
 		var x = this.gameField[1][0].getPositionX();
-		returnA[0] = this.createFirstLine(x);
+		newarray[0] = this.createFirstLine(x);
 		for (var i = 0; i < this.gameField.length - 1; i++) {
-			returnA[i + 1] = this.gameField[i];
+			newarray[i + 1] = this.gameField[i];
 		}
-		this.gameField = returnA;
+		this.gameField = newarray;
 		this.addZOrderToGameField();
 		this.player.arrayPosY = this.player.arrayPosY + 1;
 		if (this.player.arrayPosY >= this.gameField.length) {
-			console.log('M: rearrange kills player');
 			this.player.fall();
 			this.game.getComponent('Game').state = GameState.GameOver;
 		}
 	},
 
 	createFirstLine: function createFirstLine(x) {
-		cc.log('M: createFirstLine');
-		var returnA = [];
-		//next line from block-puffer
-		var array = this.getNextLineFromPuffer();
-		//next line from item-puffer
+		var newarray = [];
+		var bufferarray = this.getNextLineFromPuffer();
 		var arrayItems = this.getNextLineFromItemPuffer();
 
-		for (var i = 0; i < array.length; i++) {
-			if (array.length % 2 == 0) {
+		for (var i = 0; i < bufferarray.length; i++) {
+			if (bufferarray.length % 2 == 0) {
 
-				returnA[i] = this.spawnCube(x + i * distX, ySpawnPosition + distY - spawnOffSetY, array[i], arrayItems[i]);
-				returnA[i].opacity = 0;
-				var rise = cc.moveTo(1, cc.p(returnA[i].getPosition().x, ySpawnPosition + distY)).easing(cc.easeCubicActionIn());
+				newarray[i] = this.spawnCube(x + i * distX, ySpawnPosition + distY - spawnOffSetY, bufferarray[i], arrayItems[i]);
+				newarray[i].opacity = 0;
+				var rise = cc.moveTo(1, cc.p(newarray[i].getPosition().x, ySpawnPosition + distY)).easing(cc.easeCubicActionIn());
 				var fade = cc.fadeIn(1);
-				returnA[i].runAction(cc.spawn(fade, rise));
+				newarray[i].runAction(cc.spawn(fade, rise));
 			} else {
-				//newCube = this.spawnBlueCube(startX+(x*distX)-(distX/2), startY-(distY*y));
-				//cc.log('wir haben ein ungerades Array');
-
-				returnA[i] = this.spawnCube(x + i * distX, ySpawnPosition + distY - spawnOffSetY, array[i], arrayItems[i]);
-				returnA[i].opacity = 0;
-				var rise = cc.moveTo(1, cc.p(returnA[i].getPosition().x, ySpawnPosition + distY)).easing(cc.easeCubicActionIn());
+				newarray[i] = this.spawnCube(x + i * distX, ySpawnPosition + distY - spawnOffSetY, bufferarray[i], arrayItems[i]);
+				newarray[i].opacity = 0;
+				var rise = cc.moveTo(1, cc.p(newarray[i].getPosition().x, ySpawnPosition + distY)).easing(cc.easeCubicActionIn());
 				var fade = cc.fadeIn(1);
-				returnA[i].runAction(cc.spawn(fade, rise));
+				newarray[i].runAction(cc.spawn(fade, rise));
 			}
 		}
-		return returnA;
+		return newarray;
 	},
 
-	//TODO: add code to each case, so items are created as well (as of now, item-code only exists in case 1)
+	//
+	// All relevant data has to be loaded as properties within the prefab instantiated here.!!
+	//
 	spawnCube: function spawnCube(x, y, cubeNumber, itemNumber) {
 		cc.log('M: spawnCube');
 		switch (cubeNumber) {
 			case 0:
-				//generate a new node in the scene with a preset template
 				var newCube = cc.instantiate(this.Empty);
-				newCube.getComponent('Empty').blocktype = BlockType.Empty;
-
 				break;
 			case 1:
 				var newCube = cc.instantiate(this.Grass);
-				newCube.getComponent('Grass').blocktype = BlockType.Grass;
-				//creating new item and adding it to cube
-				newCube = this.spawnItem(newCube, itemNumber, 'Grass');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 			case 2:
 				var newCube = cc.instantiate(this.Dirt);
-				newCube.getComponent('Dirt').blocktype = BlockType.Dirt;
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				newCube = this.spawnItem(newCube, itemNumber, 'Dirt');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 			case 3:
-				var newCube = cc.instantiate(this.Trapdoor);
-				newCube.getComponent('Trapdoor').blocktype = BlockType.Trapdoor;
-				newCube.getComponent('Trapdoor').sprite = newCube;
-				//TODO: delete the following three lines, testing purposes only. Trapdoor never has items on it.
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				//newCube = this.spawnItem(newCube, itemNumber, 'Trapdoor');
+				newCube = cc.instantiate(this.Trapdoor);
+				//newCube.getComponent('Block').sprite = newCube;
 
 				break;
 			case 4:
 				var newCube = cc.instantiate(this.Switcher);
-				newCube.getComponent('Switcher').blocktype = BlockType.Switcher;
-				//TODO: delete the following three lines, testing purposes only. Trapdoor never has items on it.
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				newCube = this.spawnItem(newCube, itemNumber, 'Switcher');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 			case 5:
 				var newCube = cc.instantiate(this.Poison);
-				newCube.getComponent('Poison').blocktype = BlockType.Poison;
-				//TODO: delete the following three lines, testing purposes only. Trapdoor never has items on it.
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				newCube = this.spawnItem(newCube, itemNumber, 'Poison');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 			case 6:
 				var newCube = cc.instantiate(this.Spike);
-				newCube.getComponent('Spike').blocktype = BlockType.Spike;
-				//TODO: delete the following three lines, testing purposes only. Trapdoor never has items on it.
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				newCube = this.spawnItem(newCube, itemNumber, 'Spike');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 			case 7:
 				var newCube = cc.instantiate(this.WaterC);
-				newCube.getComponent('Empty').blocktype = BlockType.Empty;
-				newCube.name = 'Empty';
 				break;
 			default:
 				var newCube = cc.instantiate(this.Grass);
-				newCube.getComponent('Grass').blocktype = BlockType.Grass;
-				//creating new item and adding it to cube
-				//var newItemToAdd = this.spawnItem(itemNumber);
-				newCube = this.spawnItem(newCube, itemNumber, 'Grass');
+				newCube = this.spawnItem(newCube, itemNumber);
 
 				break;
 		}
 
-		//set up a position for the "EMPTY"
-		//newCube.setAnchorPoint(cc.p(0,0));
-		//-----newCube.addChild(newItemToAdd);
 		newCube.setPosition(x, y);
-		//put the newly added node under the Canvas node
 
 		this.node.addChild(newCube);
 
-		//cc.log('Returning the following cube: ');
-		//cc.log(newCube);
 		return newCube;
 	},
 
-	// 0.Empty, 1.antidoteLeft, 2.antidoteRight, 3.coinLeft, 4.coinRight, 5.starLeft,
-	// 6.starRight, 7.BlockedBush, 8.BlockedStone, 9.SlowDownBottom, 9.SlowDownTop
-	//TODO: 10.WaterLeft, 11.WaterRight
-	spawnItem: function spawnItem(parentBlock, itemNumber, blockName) {
+	spawnItem: function spawnItem(parentBlock, itemNumber) {
 		switch (itemNumber) {
 			case 0:
 				//Empty/ no item
 				var newItem = cc.instantiate(this.Empty);
-				newItem.name = 'Empty';
 				break;
 			case 1:
 				//antidoteLeft
 				var newItem = cc.instantiate(this.AntidoteL);
-				newItem.name = 'AntidoteL';
-				newItem.getComponent('Item').itemtype = ItemType.Antidote;
-
 				break;
 			case 2:
 				//antidoteRight
 				var newItem = cc.instantiate(this.AntidoteR);
-				newItem.name = 'AntidoteR';
-				newItem.getComponent('Item').itemtype = ItemType.Antidote;
-
 				break;
 			case 3:
 				//coinLeft
 				var newItem = cc.instantiate(this.CoinL);
-				newItem.name = 'CoinL';
-				newItem.getComponent('Item').itemtype = ItemType.Coin;
 				break;
 			case 4:
 				//coinRight
 				var newItem = cc.instantiate(this.CoinR);
-				newItem.name = 'CoinR';
-				newItem.getComponent('Item').itemtype = ItemType.Coin;
-
 				break;
 			case 5:
 				//starLeft
 				var newItem = cc.instantiate(this.StarL);
-				newItem.name = 'starLeft';
-				newItem.getComponent('Item').itemtype = ItemType.Star;
 				break;
 			case 6:
 				//starRight
 				var newItem = cc.instantiate(this.StarR);
-				newItem.name = 'starRight';
-				newItem.getComponent('Item').itemtype = ItemType.Star;
 				break;
 			case 7:
 				//BlockedBush
 				var newItem = cc.instantiate(this.BlockedBush);
-				newItem.name = 'BlockedBush';
-				parentBlock.getComponent(blockName).isBlocked = true;
-				newItem.getComponent('Item').itemtype = ItemType.Blocker;
+				parentBlock.getComponent('Block').isBlocked = true;
 				break;
 			case 8:
 				//BlockedStone
 				var newItem = cc.instantiate(this.BlockedStone);
-				newItem.name = 'BlockedStone';
-				parentBlock.getComponent(blockName).isBlocked = true;
-				newItem.getComponent('Item').itemtype = ItemType.Blocker;
+				parentBlock.getComponent('Block').isBlocked = true;
 				break;
 			case 9:
 				//SlowDown (Top AND Bottom)
 				var newItem = cc.instantiate(this.SlowDownBottom);
-				newItem.getComponent('Item').itemtype = ItemType.Slower;
-				newItem.name = 'SlowDownBottom';
-
 				var newItem2 = cc.instantiate(this.SlowDownTop);
-				newItem2.getComponent('Item').itemtype = ItemType.Slower;
 				newItem.addChild(newItem2);
 				break;
 			default:
 				//Empty/ no item
 				var newItem = cc.instantiate(this.Empty);
-				newItem.name = 'Empty';
 				break;
 		}
 
-		//Items are in three classes:
-		//1. Float above cube
-		//2. Sit on top of cube
-		//3. Same position as cube (no repositioning necessary)
-		var floatAboveCube = [1, 2, 3, 4, 5, 6];
-		var rightOnTopOfCube = [7, 8, 9, 10];
+		var posY = newItem.getPositionY();
+		var posX = newItem.getPositionX();
 
 		if (floatAboveCube.includes(itemNumber)) {
-			var posY = newItem.getPositionY();
-			var posX = newItem.getPositionX();
 			newItem.setPosition(posX, posY + 50);
 		} else if (rightOnTopOfCube.includes(itemNumber)) {
-			var posY = newItem.getPositionY();
-			var posX = newItem.getPositionX();
 			newItem.setPosition(posX, posY + 40);
 		}
-		parentBlock.getComponent(blockName).item = newItem;
+
+		parentBlock.getComponent('Block').item = newItem;
 		parentBlock.addChild(newItem);
 
 		return parentBlock;
 	},
 
-	/* Gets the next line from the block-puffer, so a new line can be created.	*/
-	/* Gets the next line from the block-puffer, so a new line can be created.	*/
 	getNextLineFromPuffer: function getNextLineFromPuffer() {
-		cc.log('M: getNextLineFromPuffer');
 		var ret = [];
 		if (pufferField.length === nextFirstLine) {
-			cc.log('Puffer array is empty!');
-			/*pufferField = [];
-    pufferField = Level.L13C;
-    nextFirstLine = 0;*/
-			//TODO umkommentieren
+			//cc.log('Puffer array is empty!');
 			this.defineNextRandomArray();
-			//this.testArray()
 			ret = pufferField[nextFirstLine];
 			nextFirstLine = nextFirstLine + 1;
 		} else {
@@ -555,27 +461,11 @@ cc.Class({
 		return ret;
 	},
 
-	//TODO nur ein Dummy zum testen, später LÖSCHEN!
-	testArray: function testArray() {
-		pufferField = [];
-		pufferFieldItems = [];
-		pufferField = Level.L33C;
-		pufferFieldItems = Level.L33I;
-		nextFirstLine = 0;
-		nextFirstLineItem = 0;
-	},
-
-	/* Gets the next line from the item-puffer, so a new line can be created.	*/
 	getNextLineFromItemPuffer: function getNextLineFromItemPuffer() {
 		cc.log('M: getNextLineFromItemPuffer');
 		var ret = [];
 
 		if (pufferFieldItems.length === nextFirstLineItem) {
-			//TODO hier muessen wir noch reagieren
-			cc.log('ItemPuffer array is empty!');
-			/*pufferFieldItems = [];
-    pufferFieldItems = Level.L13I;
-    nextFirstLineItem = 0;*/
 			ret = pufferFieldItems[nextFirstLineItem];
 			nextFirstLineItem = nextFirstLineItem + 1;
 		} else {
@@ -586,16 +476,12 @@ cc.Class({
 	},
 
 	defineNextRandomArray: function defineNextRandomArray() {
-		//Score?!
 		var score = this.game.getComponent('Game').score;
-		console.log('M: defineNextRandomArray');
-		console.log('Score ausgelesen: ', score);
 
 		pufferField = [];
 		pufferFieldItems = [];
 
 		var rand = Math.random() * 10 + 1;
-		console.log('Random: ', rand);
 
 		if (score <= 35) {
 			if (rand < 4) {
@@ -645,7 +531,6 @@ cc.Class({
 	},
 
 	addZOrderToGameField: function addZOrderToGameField() {
-		cc.log('M: addZOrderToGameField');
 		var count = 1;
 		for (var y = 0; y < this.gameField.length; y++) {
 			for (var x = 0; x < this.gameField[y].length; x++) {
@@ -653,19 +538,8 @@ cc.Class({
 				count++;
 			}
 		}
-	},
-
-	getBlockType: function getBlockType(block) {
-		cc.log('M: getBlockType');
-		cc.log(block.name);
-		//var ret = block.getClassName();
-		//cc.log(ret);
-		return block.name;
-	},
-
-	callPrefab: function callPrefab(pref) {
-		this.pref.node.collide();
 	}
+
 });
 /*
  initializeField2: function(x,y){

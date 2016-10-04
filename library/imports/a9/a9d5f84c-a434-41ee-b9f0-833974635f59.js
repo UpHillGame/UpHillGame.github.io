@@ -86,6 +86,11 @@ cc.Class({
         var risePoint = cc.p(this.node.getPositionX(), this.node.getPositionY() + riseY);
         var fade = cc.fadeOut(this.getItemAnimationTime()); // Let item fade during animation
         var anim = null;
+        //Remove shadows
+        var children = this.node.children;
+        for (var i = 0; i < children.length; ++i) {
+            children[i].destroy();
+        }
 
         switch (this.itemtype) {
             case ItemType.Star:
@@ -107,6 +112,7 @@ cc.Class({
     },
 
     picked: function picked() {
+
         this.activitystate = ItemActivityState.Expired;
         this.destroyItem();
     },

@@ -2,25 +2,35 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
+
     },
 
     // use this for initialization
     onLoad: function () {
+        this.clouds = [];
+    },
+
+    generateCloudSpeed: function(){
 
     },
 
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
+    animate: function(cloud){
 
-    // },
+    },
+
+    randomInRangeInclusive: function (min, max) {
+        var ret;
+        for (; ;) {
+            ret = min + (Math.random() * (max - min) * 1.1);
+            if (ret <= max) { break; }
+        }
+        return ret;
+    },
+    
+    // called every frame, uncomment this function to activate update callback
+    update: function (dt) {
+        for(var i = 0; i < clouds.length; i++){
+            animate(clouds[i]);
+        }
+    },
 });

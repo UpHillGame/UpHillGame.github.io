@@ -191,7 +191,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "itemtype": 999,
+    "itemtype": 1000,
     "itemstate": 0,
     "activitystate": 0,
     "collectRadius": 0,

@@ -90,7 +90,7 @@
     "_atlas": null
   },
   {
-    "__type__": "65b91llmkxJtJkhqsYzFp71",
+    "__type__": "0cf80va4iJCXZDXbSwgY1mm",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -99,15 +99,20 @@
     "_enabled": true,
     "isBlocked": false,
     "hasItem": false,
-    "blocktype": 0,
-    "item": null
+    "isDeadly": false,
+    "blocktype": 3,
+    "item": null,
+    "onSteppedSound": null,
+    "defaultSound": null
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "ded0a577-cc46-40a9-8165-599b67fd2f7d"
+    },
     "fileId": "30bf2ND3gdDCYnTWVo9Rfqj"
   }
 ]

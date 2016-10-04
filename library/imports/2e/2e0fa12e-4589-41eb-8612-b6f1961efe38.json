@@ -111,7 +111,7 @@
     "playOnLoad": true
   },
   {
-    "__type__": "e050ffZnUVAjKB8fySd+ZdO",
+    "__type__": "0cf80va4iJCXZDXbSwgY1mm",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -120,15 +120,20 @@
     "_enabled": true,
     "isBlocked": false,
     "hasItem": false,
-    "blocktype": 0,
-    "item": null
+    "isDeadly": false,
+    "blocktype": 4,
+    "item": null,
+    "onSteppedSound": null,
+    "defaultSound": null
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "2e0fa12e-4589-41eb-8612-b6f1961efe38"
+    },
     "fileId": "8b78aDr0l5AAKy5j883IMkt"
   }
 ]

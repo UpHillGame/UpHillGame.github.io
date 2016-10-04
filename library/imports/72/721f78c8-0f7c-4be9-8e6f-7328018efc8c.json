@@ -111,14 +111,20 @@
     "playOnLoad": true
   },
   {
-    "__type__": "e22c3Q4gXBNCp5WTGCtGqSz",
+    "__type__": "0cf80va4iJCXZDXbSwgY1mm",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "isDeadly": true
+    "isBlocked": false,
+    "hasItem": false,
+    "isDeadly": false,
+    "blocktype": 7,
+    "item": null,
+    "onSteppedSound": null,
+    "defaultSound": null
   },
   {
     "__type__": "cc.PrefabInfo",
