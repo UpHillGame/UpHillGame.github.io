@@ -7,6 +7,9 @@ Visit https://bmmp-uphill.github.io to play the game.
 <br>
 <br>
 
+# Created with Cocos Creator
+https://http://www.cocos2d-x.org/
+
 # Licenses and Sources:
 
 Sounds:
