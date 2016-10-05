@@ -6,14 +6,21 @@ Visit https://bmmp-uphill.github.io to play the game.
 <br>
 <br>
 <br>
+<br>
+<br>
 This game was written as part of the "Blockpraktikum Multimediaprogrammierung 2016".
 <br>
-<br>
 Co-creators are Jacob Fürst, Michael Danninger, Alexander Kenkenberg
-
+<br>
+<br>
+<br>
+<br>
 # Created with Cocos Creator
 https://http://www.cocos2d-x.org/
-
+<br>
+<br>
+<br>
+<br>
 # Licenses and Sources:
 
 Sounds:
