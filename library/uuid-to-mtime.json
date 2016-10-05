@@ -280,8 +280,8 @@
     "relativePath": "scripts\\enums\\Types.js"
   },
   "ff7f8f6b-562e-403a-bd29-0ab7e33b0ddd": {
-    "asset": 1475333673903,
-    "meta": 1475335007808,
+    "asset": 1475657939737,
+    "meta": 1475666529545,
     "relativePath": "scripts\\gamefield"
   },
   "41896270-57f5-40b6-b5c3-b17dd3efbb32": {
@@ -315,8 +315,8 @@
     "relativePath": "scripts\\gamefield\\blocks\\Trapdoor.js"
   },
   "5b7c29ae-d88a-4dfe-a70f-6d6fd16fd0fc": {
-    "asset": 1475333673990,
-    "meta": 1475335008310,
+    "asset": 1475649761889,
+    "meta": 1475656453796,
     "relativePath": "scripts\\gameobjects"
   },
   "ac27662d-60ce-461d-aca0-97ab3131cc6c": {
@@ -1295,8 +1295,8 @@
     "relativePath": "scenes\\GameOverScene.fire"
   },
   "c80de14e-2d95-49f8-8c8f-e804be18efb5": {
-    "asset": 1475580985088,
-    "meta": 1475580985113,
+    "asset": 1475672371955,
+    "meta": 1475672371991,
     "relativePath": "scenes\\GameScene.fire"
   },
   "a9f9ca02-c4fa-469c-9829-b319d17f5932": {
@@ -1318,11 +1318,6 @@
     "asset": 1475333619143,
     "meta": 1475335006553,
     "relativePath": "scenes\\menu\\Startmenu.fire"
-  },
-  "69e76f74-f35c-4635-b0d9-066ac344b16e": {
-    "asset": 1475333619189,
-    "meta": 1475335008531,
-    "relativePath": "scripts\\scenescripts\\GameButtonCallbacks.js"
   },
   "10915932-fa30-45ac-8b00-13f967c96a8d": {
     "asset": 1475168850748,
@@ -1360,8 +1355,8 @@
     "relativePath": "prefabs\\blocks"
   },
   "4ab92488-d54c-4745-bb91-ac091e6af3c5": {
-    "asset": 1475333672943,
-    "meta": 1475335006515,
+    "asset": 1475656913374,
+    "meta": 1475666528275,
     "relativePath": "atlases"
   },
   "98f4b2c1-0ff8-46ea-b063-5855113db8e0": {
@@ -1530,23 +1525,63 @@
     "relativePath": "scripts\\gameobjects\\Item.js"
   },
   "e001ffa6-3163-4de5-8857-ca42dd3052d9": {
-    "asset": 1475612496326,
-    "meta": 1475612516225,
+    "asset": 1475647937851,
+    "meta": 1475647947378,
     "relativePath": "scripts\\gamefield\\GameField.js"
-  },
-  "076eff82-6ea5-4214-afd0-f6c72b2fc522": {
-    "asset": 1475613464863,
-    "meta": 1475613473723,
-    "relativePath": "scripts\\Game.js"
   },
   "dfcfecc0-01c2-4000-b5cf-8881d5263d9d": {
     "asset": 1475613770038,
     "meta": 1475613785070,
     "relativePath": "scripts\\gameobjects\\Player.js"
   },
+  "69e76f74-f35c-4635-b0d9-066ac344b16e": {
+    "asset": 1475648108244,
+    "meta": 1475648112345,
+    "relativePath": "scripts\\scenescripts\\GameButtonCallbacks.js"
+  },
+  "8943d4e8-3eb0-4925-80fa-ac62a1d51762": {
+    "asset": 1475649758092,
+    "meta": 1475649761910,
+    "relativePath": "scripts\\gameobjects\\Foe.js"
+  },
+  "cc65b06b-46f1-4b5a-b211-3cdc44548bc6": {
+    "asset": 1475656648106,
+    "meta": 1475656913426,
+    "relativePath": "atlases\\bg_clouds_atlas.plist"
+  },
+  "db0ef15c-243d-44bc-87cf-ee1f800e3477": {
+    "asset": 1475656648104,
+    "meta": 1475656912852,
+    "relativePath": "atlases\\bg_clouds_atlas.png"
+  },
+  "278785e7-3876-477c-8add-f4b138b2c28a": {
+    "asset": 1475656898586,
+    "meta": 1475656913609,
+    "relativePath": "atlases\\blocks_atlas.plist"
+  },
+  "dc3fe96a-cd0e-44de-9a24-93ece250d791": {
+    "asset": 1475656898586,
+    "meta": 1475656913295,
+    "relativePath": "atlases\\blocks_atlas.png"
+  },
+  "2f45ee54-2d08-43d1-a440-cbbd639dccd0": {
+    "asset": 1475656745036,
+    "meta": 1475656913644,
+    "relativePath": "atlases\\items_atlas.plist"
+  },
+  "c8e9b99e-c5d4-47d2-853f-63e3f9d7bb65": {
+    "asset": 1475656745033,
+    "meta": 1475656913402,
+    "relativePath": "atlases\\items_atlas.png"
+  },
+  "076eff82-6ea5-4214-afd0-f6c72b2fc522": {
+    "asset": 1475667246591,
+    "meta": 1475672367756,
+    "relativePath": "scripts\\Game.js"
+  },
   "7288f8ec-8971-4094-bf8b-8867a743c3ab": {
-    "asset": 1475614203716,
-    "meta": 1475614244885,
+    "asset": 1475673768236,
+    "meta": 1475673770213,
     "relativePath": "scripts\\scenescripts\\CloudAnimation.js"
   }
 }

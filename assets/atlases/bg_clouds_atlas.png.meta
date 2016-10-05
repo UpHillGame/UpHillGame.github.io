@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "db0ef15c-243d-44bc-87cf-ee1f800e3477",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "bg_clouds_atlas": {
+      "ver": "1.0.3",
+      "uuid": "e23ab83b-5b0f-4571-93b6-d3f369918475",
+      "rawTextureUuid": "db0ef15c-243d-44bc-87cf-ee1f800e3477",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1286,
+      "height": 1203,
+      "rawWidth": 1286,
+      "rawHeight": 1203,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

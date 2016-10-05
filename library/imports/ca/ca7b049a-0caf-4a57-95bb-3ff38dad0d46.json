@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "blocked_stone",
+    "texture": "c8e9b99e-c5d4-47d2-853f-63e3f9d7bb65",
+    "atlas": "2f45ee54-2d08-43d1-a440-cbbd639dccd0",
+    "rect": [
+      129,
+      1,
+      55,
+      68
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "originalSize": [
+      83,
+      96
+    ]
+  }
+}

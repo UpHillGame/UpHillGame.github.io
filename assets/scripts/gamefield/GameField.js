@@ -397,6 +397,7 @@ cc.Class({
 
 				newarray[i] = this.spawnCube((x + (i * distX)), (ySpawnPosition + distY - spawnOffSetY), bufferarray[i], arrayItems[i]);
 				newarray[i].opacity = 0;
+				// Let blocks slowly rise when they spawn
 				var rise = cc.moveTo(1, cc.p(newarray[i].getPosition().x, ySpawnPosition + distY)).easing(cc.easeCubicActionIn());
 				var fade = cc.fadeIn(1);
 				newarray[i].runAction(cc.spawn(fade, rise));
@@ -414,7 +415,7 @@ cc.Class({
 
 
 	//
-	// All relevant data has to be loaded as properties within the prefab instantiated here.!!
+	// All relevant data has to be loaded as properties within the prefabs instantiated here.!!
 	//
 	spawnCube: function (x, y, cubeNumber, itemNumber) {
 		cc.log('M: spawnCube');
@@ -434,8 +435,6 @@ cc.Class({
 				break;
 			case 3:
 				newCube = cc.instantiate(this.Trapdoor);
-				//newCube.getComponent('Block').sprite = newCube;
-
 				break;
 			case 4:
 				var newCube = cc.instantiate(this.Switcher);

@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "items_atlas.plist",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_spriteFrames": {
+    "antidote_left": {
+      "__uuid__": "cdde0f52-0b46-4959-8a9d-09771cb1f5cd"
+    },
+    "antidote_left_shadow": {
+      "__uuid__": "9fc6d047-f091-4102-aa82-09d66a73cc37"
+    },
+    "antidote_right": {
+      "__uuid__": "5bc2a2b6-06c6-49b5-863d-6917ddc15758"
+    },
+    "antidote_right_shadow": {
+      "__uuid__": "88e9328c-1c64-417f-9ab3-a460015c4c11"
+    },
+    "blocked_bush": {
+      "__uuid__": "585a9c82-afd5-4f3b-ae8c-341c5f144b08"
+    },
+    "blocked_stone": {
+      "__uuid__": "ca7b049a-0caf-4a57-95bb-3ff38dad0d46"
+    },
+    "coin_left": {
+      "__uuid__": "c21eac5b-3b12-4c55-83e5-8c96c2e1d9e2"
+    },
+    "coin_left_shadow": {
+      "__uuid__": "63b05747-17c5-46bc-9dcd-524579fc62db"
+    },
+    "coin_right": {
+      "__uuid__": "e18bfba3-e948-432b-a511-cc550b683c05"
+    },
+    "coin_right_shadow": {
+      "__uuid__": "7091adea-8907-4aad-b9fc-1b8a6f421b46"
+    },
+    "slow_down_bottom": {
+      "__uuid__": "02ecf9a2-2966-41b6-b2ab-1fc643ab13d1"
+    },
+    "slow_down_top": {
+      "__uuid__": "f3086337-d107-4743-95b0-72fbbf1690bb"
+    },
+    "star_left": {
+      "__uuid__": "24b8076a-8e12-4051-b2ad-6aec03b448f5"
+    },
+    "star_left_shadow": {
+      "__uuid__": "92c5b89b-f725-4a78-97d2-bb5d3dffc73b"
+    },
+    "star_right": {
+      "__uuid__": "13f30cab-18f5-43f6-a9fe-5f67b464451f"
+    },
+    "star_right_shadow": {
+      "__uuid__": "d09951b5-7453-474b-917c-01493b476682"
+    }
+  }
+}

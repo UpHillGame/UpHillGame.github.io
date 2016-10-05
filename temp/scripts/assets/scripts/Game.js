@@ -43,6 +43,11 @@ cc.Class({
         },
 
         // Game-UI
+        background: {
+            'default': null,
+            type: cc.Sprite
+        },
+
         scoreLabel: {
             'default': null,
             type: cc.Label
@@ -62,13 +67,13 @@ cc.Class({
 
     // use this for initialization
     onLoad: function onLoad() {
-        //this.setFrameRate(60);
         this.storage = cc.sys.localStorage;
         this.state = GameState.Waiting;
-        //this.GameState = GameState;
+
         this.initalizeInputControl(); // Activate input handling
 
         cc.audioEngine.playMusic(this.themeurl, true);
+
         this.storage.setItem('score', 0);
 
         this.score = 0;
@@ -85,11 +90,8 @@ cc.Class({
         this.gamefield.player = this.player;
 
         // Player is assembled. set all needed graphical information
-        //this.player.node.setPosition(this.gamefield.getStartPosition());
         this.gamefield.setPlayerStart(this.player);
         this.player.node.setLocalZOrder(1000);
-        this.player.dx = this.gamefield.disTX / 2; //only half the distance on x!!
-        this.player.dy = this.gamefield.disTY;
     },
 
     // Called when gamefield is initalized ( onLoad() has finished )
@@ -123,9 +125,8 @@ cc.Class({
         }
 
         this.destfield = this.gamefield.getJumpField(dir);
-        console.log(this.destfield);
         var steppedBlock = this.destfield.getComponent('Block');
-        console.log(steppedBlock);
+
         if (steppedBlock.isBlocked) {
             return false;
         }
@@ -159,6 +160,8 @@ cc.Class({
                         if (self.validateMove(1)) {
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos(); // Change array position after jump or bugs will spawn
+                            self.parallaxBackground();
+
                             if (self.player.oldDest !== undefined) {
                                 self.player.oldDest.getComponent('Block').playerOnTop = false;
                             }
@@ -170,6 +173,8 @@ cc.Class({
                         if (self.validateMove(-1)) {
                             self.player.move(self.destfield, self);
                             self.gamefield.updatePlayerArrayPos();
+                            self.parallaxBackground();
+
                             if (self.player.oldDest !== undefined) {
                                 self.player.oldDest.getComponent('Block').playerOnTop = false;
                             }
@@ -202,6 +207,10 @@ cc.Class({
                 }
             }
         }, self.node);
+    },
+
+    parallaxBackground: function parallaxBackground() {
+        this.background.node.runAction(cc.moveBy(this.player.jumpTime, cc.p(this.player.dir, 0)));
     },
 
     // called every frame, uncomment this function to activate update callback

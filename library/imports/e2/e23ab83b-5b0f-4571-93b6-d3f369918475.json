@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_clouds_atlas",
+    "texture": "db0ef15c-243d-44bc-87cf-ee1f800e3477",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1286,
+      1203
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1286,
+      1203
+    ]
+  }
+}

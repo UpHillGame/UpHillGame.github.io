@@ -1,0 +1,35 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "bg_clouds_atlas.plist",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_spriteFrames": {
+    "atmos": {
+      "__uuid__": "dffcc242-4a16-4f49-9016-a3fef22aa032"
+    },
+    "cloud_01": {
+      "__uuid__": "064ec174-8216-499c-8b18-b9a8d7d2d0a2"
+    },
+    "cloud_02": {
+      "__uuid__": "0e2a1340-2e1f-43d6-b618-37cba5c36a1c"
+    },
+    "cloud_03": {
+      "__uuid__": "584934a8-704d-4058-bdd8-26bc9fac3ee8"
+    },
+    "cloud_04": {
+      "__uuid__": "c35c94cd-1fce-4b90-9e07-436bc25d4be7"
+    },
+    "cloud_05": {
+      "__uuid__": "d0c3c358-f5d5-45f9-b62b-82547b6f8427"
+    },
+    "cloud_06": {
+      "__uuid__": "7c3e7940-e0fb-4593-9ca7-69767ac57c33"
+    },
+    "cloud_07": {
+      "__uuid__": "ace6a097-3d2d-4f59-8f03-1ae413054faf"
+    },
+    "cloud_horizon": {
+      "__uuid__": "78bb6230-576d-4fe2-9086-051fb1194ccb"
+    }
+  }
+}
