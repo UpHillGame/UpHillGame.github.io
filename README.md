@@ -15,12 +15,15 @@ Co-creators are Jacob Fürst, Michael Danninger, Alexander Kenkenberg
 <br>
 <br>
 <br>
+
 # Created with Cocos Creator
 https://http://www.cocos2d-x.org/
+
 <br>
 <br>
 <br>
 <br>
+
 # Licenses and Sources:
 
 Sounds:
