@@ -2,7 +2,7 @@
 
 <br>
 <br>
-Visit https://bmmp-uphill.github.io to play the game.
+Visit https://uphillgame.github.io to play the game.
 <br>
 <br>
 <br>
